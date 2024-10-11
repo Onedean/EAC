@@ -1,0 +1,151 @@
+2024-09-13 01:53:35,562 - logger name:log/ENGERY/retrain_st_engery-43/retrain_st_engery.log
+2024-09-13 01:53:35,563 - params : {'conf': 'new_conf/ENGERY/retrain_st_engery.json', 'seed': 43, 'paral': 0, 'gpuid': 1, 'logname': 'retrain_st_engery', 'method': 'TrafficStream', 'load_first_year': 0, 'first_year_model_path': 'log/PEMS/trafficstream-42/2011/16.6936.pkl', 'device': device(type='cuda', index=1), 'methods': {'TrafficStream': <class 'src.model.model.TrafficStream_Model'>, 'STKEC': <class 'src.model.model.STKEC_Model'>, 'LSTM': <class 'src.model.model.LSTM_Model'>, 'MLP': <class 'src.model.model.MLP_Model'>, 'STLora': <class 'src.model.model.STLora_Model'>, 'STEmb': <class 'src.model.model.STEmb_Model'>}, 'begin_year': 0, 'end_year': 3, 'dropout': 0.0, 'lr': 0.03, 'batch_size': 128, 'epoch': 100, 'loss': 'mse', 'activation': 'relu', 'scheduler': 'epo', 'y_len': 12, 'x_len': 12, 'data_process': 1, 'raw_data_path': 'data/ENGERY/RawData/', 'save_data_path': 'data/ENGERY/FastData/', 'graph_path': 'data/ENGERY/graph/', 'model_path': 'log/ENGERY/', 'gcn': {'in_channel': 12, 'out_channel': 12, 'hidden_channel': 64}, 'tcn': {'in_channel': 1, 'out_channel': 1, 'kernel_size': 3, 'dilation': 1}, 'init': False, 'train': 1, 'auto_test': 0, 'strategy': 'retrain', 'detect': False, 'ewc': False, 'replay': False, 'path': 'log/ENGERY/retrain_st_engery-43', 'logger': <Logger utils.initialize (INFO)>}
+2024-09-13 01:53:35,997 - [*] Year 0 load from data/ENGERY/FastData/0.npz
+2024-09-13 01:53:36,124 - [*] Year 0 Dataset load!
+2024-09-13 01:53:36,126 - Total Parameters: 3308
+2024-09-13 01:53:36,126 - Trainable Parameters: 3308
+2024-09-13 01:53:36,127 - [*] Year 0 Training start
+2024-09-13 01:53:36,725 - node number torch.Size([13184, 12])
+2024-09-13 01:53:37,940 - epoch:0, training loss:165867.1795 validation loss:175.8627
+2024-09-13 01:53:39,386 - epoch:1, training loss:79268.0953 validation loss:178.8692
+2024-09-13 01:53:40,797 - epoch:2, training loss:77221.3322 validation loss:169.2146
+2024-09-13 01:53:42,223 - epoch:3, training loss:74371.7459 validation loss:178.7247
+2024-09-13 01:53:43,617 - epoch:4, training loss:73814.4913 validation loss:174.7204
+2024-09-13 01:53:45,028 - epoch:5, training loss:73592.0427 validation loss:174.7264
+2024-09-13 01:53:46,523 - epoch:6, training loss:75765.4719 validation loss:158.1694
+2024-09-13 01:53:48,009 - epoch:7, training loss:73730.5050 validation loss:169.9485
+2024-09-13 01:53:49,428 - epoch:8, training loss:73391.7768 validation loss:162.7389
+2024-09-13 01:53:50,837 - epoch:9, training loss:73517.5111 validation loss:168.7378
+2024-09-13 01:53:52,260 - epoch:10, training loss:73944.3892 validation loss:174.9078
+2024-09-13 01:53:54,055 - epoch:11, training loss:73967.2422 validation loss:156.0708
+2024-09-13 01:53:55,540 - epoch:12, training loss:74013.1776 validation loss:172.0703
+2024-09-13 01:53:57,038 - epoch:13, training loss:72416.0065 validation loss:177.6410
+2024-09-13 01:53:58,562 - epoch:14, training loss:74178.3410 validation loss:159.0490
+2024-09-13 01:54:00,071 - epoch:15, training loss:73648.8482 validation loss:168.6169
+2024-09-13 01:54:01,540 - epoch:16, training loss:73196.7748 validation loss:166.2807
+2024-09-13 01:54:03,146 - epoch:17, training loss:73010.5167 validation loss:162.2225
+2024-09-13 01:54:03,788 - [*] loss:108177.0938
+2024-09-13 01:54:03,792 - [*] year 0, testing
+2024-09-13 01:54:03,831 - T:3	MAE	178.9154	RMSE	251.0586	MAPE	2103.8113
+2024-09-13 01:54:03,894 - T:6	MAE	200.2884	RMSE	288.8769	MAPE	2165.8173
+2024-09-13 01:54:04,150 - T:12	MAE	233.6006	RMSE	338.0181	MAPE	3502.5364
+2024-09-13 01:54:04,150 - T:Avg	MAE	201.0391	RMSE	287.2302	MAPE	2526.7034
+2024-09-13 01:54:04,150 - Finished optimization, total time:15.84 s, best model:log/ENGERY/retrain_st_engery-43/0/156.0708.pkl
+2024-09-13 01:54:04,635 - [*] Year 1 load from data/ENGERY/FastData/1.npz
+2024-09-13 01:54:04,636 - [*] Year 1 Dataset load!
+2024-09-13 01:54:04,637 - Total Parameters: 3308
+2024-09-13 01:54:04,637 - Trainable Parameters: 3308
+2024-09-13 01:54:04,638 - [*] Year 1 Training start
+2024-09-13 01:54:05,300 - node number torch.Size([14336, 12])
+2024-09-13 01:54:06,303 - epoch:0, training loss:185294.3672 validation loss:188.3525
+2024-09-13 01:54:07,921 - epoch:1, training loss:71280.5037 validation loss:199.5287
+2024-09-13 01:54:09,582 - epoch:2, training loss:63771.0758 validation loss:190.5317
+2024-09-13 01:54:11,221 - epoch:3, training loss:62904.4263 validation loss:207.8817
+2024-09-13 01:54:12,798 - epoch:4, training loss:62050.9675 validation loss:219.8671
+2024-09-13 01:54:14,368 - epoch:5, training loss:61913.7020 validation loss:180.2532
+2024-09-13 01:54:16,024 - epoch:6, training loss:62727.7007 validation loss:195.0961
+2024-09-13 01:54:17,672 - epoch:7, training loss:60894.2195 validation loss:193.8993
+2024-09-13 01:54:19,335 - epoch:8, training loss:60880.3776 validation loss:202.8824
+2024-09-13 01:54:20,985 - epoch:9, training loss:62376.6286 validation loss:192.3406
+2024-09-13 01:54:22,651 - epoch:10, training loss:60866.1246 validation loss:226.0197
+2024-09-13 01:54:24,370 - epoch:11, training loss:61062.9600 validation loss:186.6276
+2024-09-13 01:54:25,073 - [*] loss:66285.7266
+2024-09-13 01:54:25,075 - [*] year 1, testing
+2024-09-13 01:54:25,114 - T:3	MAE	123.9118	RMSE	188.0867	MAPE	4078.9303
+2024-09-13 01:54:25,176 - T:6	MAE	145.5336	RMSE	217.4552	MAPE	5902.5417
+2024-09-13 01:54:25,364 - T:12	MAE	178.6541	RMSE	261.1039	MAPE	8811.3937
+2024-09-13 01:54:25,365 - T:Avg	MAE	146.2118	RMSE	217.9303	MAPE	6027.6752
+2024-09-13 01:54:25,365 - Finished optimization, total time:11.36 s, best model:log/ENGERY/retrain_st_engery-43/1/180.2532.pkl
+2024-09-13 01:54:25,921 - [*] Year 2 load from data/ENGERY/FastData/2.npz
+2024-09-13 01:54:25,922 - [*] Year 2 Dataset load!
+2024-09-13 01:54:25,923 - Total Parameters: 3308
+2024-09-13 01:54:25,924 - Trainable Parameters: 3308
+2024-09-13 01:54:25,924 - [*] Year 2 Training start
+2024-09-13 01:54:26,671 - node number torch.Size([15616, 12])
+2024-09-13 01:54:27,709 - epoch:0, training loss:160121.0947 validation loss:186.6409
+2024-09-13 01:54:29,421 - epoch:1, training loss:74421.5473 validation loss:187.6423
+2024-09-13 01:54:31,087 - epoch:2, training loss:65977.6531 validation loss:187.7759
+2024-09-13 01:54:32,772 - epoch:3, training loss:64752.6979 validation loss:171.1822
+2024-09-13 01:54:34,445 - epoch:4, training loss:63346.6932 validation loss:201.0215
+2024-09-13 01:54:36,116 - epoch:5, training loss:62753.3918 validation loss:175.0350
+2024-09-13 01:54:37,882 - epoch:6, training loss:62280.6328 validation loss:190.5962
+2024-09-13 01:54:39,650 - epoch:7, training loss:63416.1129 validation loss:164.2416
+2024-09-13 01:54:41,356 - epoch:8, training loss:62605.0917 validation loss:197.8779
+2024-09-13 01:54:43,110 - epoch:9, training loss:61422.0814 validation loss:223.0982
+2024-09-13 01:54:44,790 - epoch:10, training loss:63122.9754 validation loss:180.4375
+2024-09-13 01:54:46,466 - epoch:11, training loss:61207.1668 validation loss:159.1389
+2024-09-13 01:54:48,141 - epoch:12, training loss:61604.2753 validation loss:170.8010
+2024-09-13 01:54:49,757 - epoch:13, training loss:61356.8111 validation loss:184.9915
+2024-09-13 01:54:51,468 - epoch:14, training loss:60901.2758 validation loss:180.2650
+2024-09-13 01:54:53,103 - epoch:15, training loss:61104.7668 validation loss:178.9643
+2024-09-13 01:54:54,755 - epoch:16, training loss:60852.5008 validation loss:158.1662
+2024-09-13 01:54:56,391 - epoch:17, training loss:60507.1107 validation loss:173.3114
+2024-09-13 01:54:58,042 - epoch:18, training loss:61608.0974 validation loss:190.2297
+2024-09-13 01:54:59,744 - epoch:19, training loss:61026.6557 validation loss:182.9455
+2024-09-13 01:55:01,534 - epoch:20, training loss:60495.6744 validation loss:194.7056
+2024-09-13 01:55:03,190 - epoch:21, training loss:61038.3435 validation loss:168.4880
+2024-09-13 01:55:04,947 - epoch:22, training loss:61806.7969 validation loss:151.3927
+2024-09-13 01:55:06,572 - epoch:23, training loss:61064.6306 validation loss:199.9447
+2024-09-13 01:55:08,170 - epoch:24, training loss:61308.2318 validation loss:195.0984
+2024-09-13 01:55:09,793 - epoch:25, training loss:59443.7345 validation loss:192.2214
+2024-09-13 01:55:11,500 - epoch:26, training loss:59663.9523 validation loss:166.9086
+2024-09-13 01:55:13,195 - epoch:27, training loss:60072.0534 validation loss:192.1539
+2024-09-13 01:55:14,883 - epoch:28, training loss:60123.4129 validation loss:188.9019
+2024-09-13 01:55:15,568 - [*] loss:43237.1445
+2024-09-13 01:55:15,572 - [*] year 2, testing
+2024-09-13 01:55:15,614 - T:3	MAE	82.1166	RMSE	134.5283	MAPE	2207.2817
+2024-09-13 01:55:15,685 - T:6	MAE	106.6730	RMSE	167.6350	MAPE	4077.2545
+2024-09-13 01:55:15,873 - T:12	MAE	139.2674	RMSE	210.9038	MAPE	6978.2944
+2024-09-13 01:55:15,874 - T:Avg	MAE	106.1067	RMSE	166.0606	MAPE	4191.5151
+2024-09-13 01:55:15,874 - Finished optimization, total time:28.21 s, best model:log/ENGERY/retrain_st_engery-43/2/151.3927.pkl
+2024-09-13 01:55:16,446 - [*] Year 3 load from data/ENGERY/FastData/3.npz
+2024-09-13 01:55:16,447 - [*] Year 3 Dataset load!
+2024-09-13 01:55:16,448 - Total Parameters: 3308
+2024-09-13 01:55:16,449 - Trainable Parameters: 3308
+2024-09-13 01:55:16,449 - [*] Year 3 Training start
+2024-09-13 01:55:17,273 - node number torch.Size([17152, 12])
+2024-09-13 01:55:18,353 - epoch:0, training loss:141525.9615 validation loss:139.6790
+2024-09-13 01:55:20,035 - epoch:1, training loss:43791.9148 validation loss:145.1835
+2024-09-13 01:55:21,721 - epoch:2, training loss:39149.3094 validation loss:137.2409
+2024-09-13 01:55:23,441 - epoch:3, training loss:37941.7275 validation loss:122.9118
+2024-09-13 01:55:25,156 - epoch:4, training loss:37257.5548 validation loss:125.6398
+2024-09-13 01:55:26,857 - epoch:5, training loss:36559.3609 validation loss:115.2111
+2024-09-13 01:55:28,604 - epoch:6, training loss:36608.6093 validation loss:117.7614
+2024-09-13 01:55:30,231 - epoch:7, training loss:36595.6042 validation loss:119.6078
+2024-09-13 01:55:31,919 - epoch:8, training loss:36385.6803 validation loss:115.1359
+2024-09-13 01:55:33,717 - epoch:9, training loss:36392.0716 validation loss:126.5602
+2024-09-13 01:55:35,564 - epoch:10, training loss:35969.7002 validation loss:116.3490
+2024-09-13 01:55:37,314 - epoch:11, training loss:36268.0100 validation loss:108.2165
+2024-09-13 01:55:39,050 - epoch:12, training loss:36220.5603 validation loss:114.0921
+2024-09-13 01:55:40,758 - epoch:13, training loss:36424.7489 validation loss:131.7542
+2024-09-13 01:55:42,498 - epoch:14, training loss:35800.3780 validation loss:140.8622
+2024-09-13 01:55:44,230 - epoch:15, training loss:36145.2530 validation loss:130.5923
+2024-09-13 01:55:45,935 - epoch:16, training loss:36425.1471 validation loss:121.1630
+2024-09-13 01:55:47,592 - epoch:17, training loss:35905.1800 validation loss:112.1427
+2024-09-13 01:55:48,308 - [*] loss:85266.9688
+2024-09-13 01:55:48,314 - [*] year 3, testing
+2024-09-13 01:55:48,358 - T:3	MAE	238.1003	RMSE	283.9906	MAPE	33513.6688
+2024-09-13 01:55:48,437 - T:6	MAE	241.5713	RMSE	289.5164	MAPE	35025.1648
+2024-09-13 01:55:48,645 - T:12	MAE	247.6228	RMSE	299.5456	MAPE	37687.4512
+2024-09-13 01:55:48,645 - T:Avg	MAE	242.4885	RMSE	290.8879	MAPE	35224.4647
+2024-09-13 01:55:48,645 - Finished optimization, total time:18.18 s, best model:log/ENGERY/retrain_st_engery-43/3/108.2165.pkl
+2024-09-13 01:55:48,645 - 
+
+
+2024-09-13 01:55:48,646 - 3   	 MAE	    178.92	    123.91	     82.12	    238.10		  155.76
+2024-09-13 01:55:48,646 - 3   	RMSE	    251.06	    188.09	    134.53	    283.99		  214.42
+2024-09-13 01:55:48,646 - 3   	MAPE	   2103.81	   4078.93	   2207.28	  33513.67		10475.92
+2024-09-13 01:55:48,646 - 6   	 MAE	    200.29	    145.53	    106.67	    241.57		  173.52
+2024-09-13 01:55:48,646 - 6   	RMSE	    288.88	    217.46	    167.63	    289.52		  240.87
+2024-09-13 01:55:48,646 - 6   	MAPE	   2165.82	   5902.54	   4077.25	  35025.16		11792.69
+2024-09-13 01:55:48,646 - 12  	 MAE	    233.60	    178.65	    139.27	    247.62		  199.79
+2024-09-13 01:55:48,646 - 12  	RMSE	    338.02	    261.10	    210.90	    299.55		  277.39
+2024-09-13 01:55:48,646 - 12  	MAPE	   3502.54	   8811.39	   6978.29	  37687.45		14244.92
+2024-09-13 01:55:48,646 - Avg 	 MAE	    201.04	    146.21	    106.11	    242.49		  173.96
+2024-09-13 01:55:48,646 - Avg 	RMSE	    287.23	    217.93	    166.06	    290.89		  240.53
+2024-09-13 01:55:48,646 - Avg 	MAPE	   2526.70	   6027.68	   4191.52	  35224.46		11992.59
+2024-09-13 01:55:48,647 - year	0   	total_time	   15.8363	average_time	    0.8798	epoch	18
+2024-09-13 01:55:48,647 - year	1   	total_time	   11.3633	average_time	    0.9470	epoch	12
+2024-09-13 01:55:48,647 - year	2   	total_time	   28.2114	average_time	    0.9728	epoch	29
+2024-09-13 01:55:48,647 - year	3   	total_time	   18.1788	average_time	    1.0099	epoch	18
+2024-09-13 01:55:48,647 - total time: 73.5898

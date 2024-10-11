@@ -1,0 +1,53 @@
+2024-09-14 18:53:05,770 - logger name:log/AIR/pretrain_st_air-43/pretrain_st_air.log
+2024-09-14 18:53:05,770 - params : {'conf': 'new_conf/AIR/pretrain_st_air.json', 'seed': 42, 'paral': 0, 'gpuid': 0, 'logname': 'pretrain_st_air', 'method': 'TrafficStream', 'load_first_year': 1, 'first_year_model_path': 'log/AIR/retrain_st_air-43/2016/17.2116.pkl', 'device': device(type='cuda', index=0), 'methods': {'TrafficStream': <class 'src.model.model.TrafficStream_Model'>, 'STKEC': <class 'src.model.model.STKEC_Model'>, 'LSTM': <class 'src.model.model.LSTM_Model'>, 'MLP': <class 'src.model.model.MLP_Model'>, 'STLora': <class 'src.model.model.STLora_Model'>, 'STEmb': <class 'src.model.model.STEmb_Model'>}, 'begin_year': 2016, 'end_year': 2019, 'dropout': 0.1, 'lr': 0.01, 'batch_size': 128, 'epoch': 100, 'loss': 'mse', 'activation': 'relu', 'scheduler': 'epo', 'y_len': 12, 'x_len': 12, 'data_process': 1, 'raw_data_path': 'data/AIR/RawData/', 'save_data_path': 'data/AIR/FastData/', 'graph_path': 'data/AIR/graph/', 'model_path': 'log/AIR/', 'gcn': {'in_channel': 12, 'out_channel': 12, 'hidden_channel': 64}, 'tcn': {'in_channel': 1, 'out_channel': 1, 'kernel_size': 3, 'dilation': 1}, 'init': False, 'train': 0, 'auto_test': 1, 'strategy': 'pretrain', 'detect': False, 'ewc': False, 'replay': False, 'path': 'log/AIR/pretrain_st_air-43', 'logger': <Logger utils.initialize (INFO)>}
+2024-09-14 18:53:10,072 - [*] Year 2016 load from data/AIR/FastData/2016.npz
+2024-09-14 18:53:10,236 - [*] load from log/AIR/retrain_st_air-43/2016/17.2116.pkl
+2024-09-14 18:53:11,765 - [*] loss:2763.6116
+2024-09-14 18:53:11,792 - [*] year 2016, testing
+2024-09-14 18:53:12,222 - T:3	MAE	26.6587	RMSE	42.6160	MAPE	28.2431
+2024-09-14 18:53:13,018 - T:6	MAE	29.6509	RMSE	47.7346	MAPE	32.2229
+2024-09-14 18:53:15,377 - T:12	MAE	32.9345	RMSE	52.9821	MAPE	36.7511
+2024-09-14 18:53:15,377 - T:Avg	MAE	29.4400	RMSE	47.2283	MAPE	31.9686
+2024-09-14 18:53:19,939 - [*] Year 2017 load from data/AIR/FastData/2017.npz
+2024-09-14 18:53:19,948 - [*] load from log/AIR/retrain_st_air-43/2016/17.2116.pkl
+2024-09-14 18:53:21,339 - [*] loss:1859.5500
+2024-09-14 18:53:21,377 - [*] year 2017, testing
+2024-09-14 18:53:21,780 - T:3	MAE	22.1805	RMSE	32.7730	MAPE	23.9274
+2024-09-14 18:53:22,541 - T:6	MAE	25.1846	RMSE	38.1481	MAPE	27.4564
+2024-09-14 18:53:24,893 - T:12	MAE	28.4670	RMSE	43.5328	MAPE	31.5157
+2024-09-14 18:53:24,894 - T:Avg	MAE	24.9801	RMSE	37.5735	MAPE	27.2867
+2024-09-14 18:53:24,895 - [*] No increasing nodes at year 2017, store model of the last year.
+2024-09-14 18:53:29,528 - [*] Year 2018 load from data/AIR/FastData/2018.npz
+2024-09-14 18:53:29,540 - [*] load from log/AIR/retrain_st_air-43/2016/17.2116.pkl
+2024-09-14 18:53:31,077 - [*] loss:1389.4866
+2024-09-14 18:53:31,108 - [*] year 2018, testing
+2024-09-14 18:53:31,502 - T:3	MAE	16.0425	RMSE	26.7809	MAPE	26.4700
+2024-09-14 18:53:32,282 - T:6	MAE	19.1252	RMSE	32.0525	MAPE	31.4790
+2024-09-14 18:53:34,609 - T:12	MAE	22.3069	RMSE	37.3450	MAPE	36.7980
+2024-09-14 18:53:34,609 - T:Avg	MAE	18.8183	RMSE	31.4653	MAPE	30.9986
+2024-09-14 18:53:34,611 - [*] No increasing nodes at year 2018, store model of the last year.
+2024-09-14 18:53:39,499 - [*] Year 2019 load from data/AIR/FastData/2019.npz
+2024-09-14 18:53:39,512 - [*] load from log/AIR/retrain_st_air-43/2016/17.2116.pkl
+2024-09-14 18:53:41,049 - [*] loss:1097.5980
+2024-09-14 18:53:41,084 - [*] year 2019, testing
+2024-09-14 18:53:41,491 - T:3	MAE	14.0137	RMSE	22.5979	MAPE	20.7289
+2024-09-14 18:53:42,286 - T:6	MAE	17.4153	RMSE	28.0786	MAPE	26.1567
+2024-09-14 18:53:44,661 - T:12	MAE	20.9498	RMSE	33.3575	MAPE	32.0513
+2024-09-14 18:53:44,661 - T:Avg	MAE	17.0821	RMSE	27.3629	MAPE	25.6946
+2024-09-14 18:53:44,662 - [*] No increasing nodes at year 2019, store model of the last year.
+2024-09-14 18:53:44,662 - 
+
+
+2024-09-14 18:53:44,663 - 3   	 MAE	     26.66	     22.18	     16.04	     14.01		   19.72
+2024-09-14 18:53:44,663 - 3   	RMSE	     42.62	     32.77	     26.78	     22.60		   31.19
+2024-09-14 18:53:44,663 - 3   	MAPE	     28.24	     23.93	     26.47	     20.73		   24.84
+2024-09-14 18:53:44,663 - 6   	 MAE	     29.65	     25.18	     19.13	     17.42		   22.84
+2024-09-14 18:53:44,663 - 6   	RMSE	     47.73	     38.15	     32.05	     28.08		   36.50
+2024-09-14 18:53:44,663 - 6   	MAPE	     32.22	     27.46	     31.48	     26.16		   29.33
+2024-09-14 18:53:44,663 - 12  	 MAE	     32.93	     28.47	     22.31	     20.95		   26.16
+2024-09-14 18:53:44,663 - 12  	RMSE	     52.98	     43.53	     37.34	     33.36		   41.80
+2024-09-14 18:53:44,663 - 12  	MAPE	     36.75	     31.52	     36.80	     32.05		   34.28
+2024-09-14 18:53:44,663 - Avg 	 MAE	     29.44	     24.98	     18.82	     17.08		   22.58
+2024-09-14 18:53:44,663 - Avg 	RMSE	     47.23	     37.57	     31.47	     27.36		   35.91
+2024-09-14 18:53:44,663 - Avg 	MAPE	     31.97	     27.29	     31.00	     25.69		   28.99
+2024-09-14 18:53:44,663 - total time: 0.0000

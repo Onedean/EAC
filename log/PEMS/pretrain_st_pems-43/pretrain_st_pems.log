@@ -1,0 +1,80 @@
+2024-09-12 12:43:40,326 - logger name:log/PEMS/pretrain_st_pems-43/pretrain_st_pems.log
+2024-09-12 12:43:40,327 - params : {'conf': 'new_conf/PEMS/pretrain_st_pems.json', 'seed': 43, 'paral': 0, 'gpuid': 2, 'logname': 'pretrain_st_pems', 'method': 'TrafficStream', 'load_first_year': 1, 'first_year_model_path': 'log/PEMS/retrain_st_pems-43/2011/16.0545.pkl', 'device': device(type='cuda', index=2), 'methods': {'TrafficStream': <class 'src.model.model.TrafficStream_Model'>, 'STKEC': <class 'src.model.model.STKEC_Model'>, 'LSTM': <class 'src.model.model.LSTM_Model'>, 'MLP': <class 'src.model.model.MLP_Model'>, 'STLora': <class 'src.model.model.STLora_Model'>, 'STEmb': <class 'src.model.model.STEmb_Model'>}, 'begin_year': 2011, 'end_year': 2017, 'dropout': 0.1, 'lr': 0.01, 'batch_size': 128, 'epoch': 100, 'loss': 'mse', 'activation': 'relu', 'scheduler': 'epo', 'y_len': 12, 'x_len': 12, 'data_process': 0, 'raw_data_path': 'data/PEMS/RawData/', 'save_data_path': 'data/PEMS/FastData/', 'graph_path': 'data/PEMS/graph/', 'model_path': 'log/PEMS/', 'gcn': {'in_channel': 12, 'out_channel': 12, 'hidden_channel': 64}, 'tcn': {'in_channel': 1, 'out_channel': 1, 'kernel_size': 3, 'dilation': 1}, 'init': False, 'train': 0, 'auto_test': 1, 'strategy': 'pretrain', 'detect': False, 'ewc': False, 'replay': False, 'path': 'log/PEMS/pretrain_st_pems-43', 'logger': <Logger utils.initialize (INFO)>}
+2024-09-12 12:43:40,339 - [*] Year 2011 load from data/PEMS/FastData/2011.npz
+2024-09-12 12:43:40,489 - [*] load from log/PEMS/retrain_st_pems-43/2011/16.0545.pkl
+2024-09-12 12:43:41,816 - [*] loss:607.9017
+2024-09-12 12:43:41,842 - [*] year 2011, testing
+2024-09-12 12:43:42,281 - T:3	MAE	12.9677	RMSE	19.8531	MAPE	16.2561
+2024-09-12 12:43:43,101 - T:6	MAE	13.9022	RMSE	21.4926	MAPE	17.3764
+2024-09-12 12:43:45,153 - T:12	MAE	15.8900	RMSE	24.8666	MAPE	19.7761
+2024-09-12 12:43:45,153 - T:Avg	MAE	14.0689	RMSE	21.7487	MAPE	17.5729
+2024-09-12 12:43:45,167 - [*] Year 2012 load from data/PEMS/FastData/2012.npz
+2024-09-12 12:43:45,173 - [*] load from log/PEMS/retrain_st_pems-43/2011/16.0545.pkl
+2024-09-12 12:43:46,478 - [*] loss:623.0771
+2024-09-12 12:43:46,511 - [*] year 2012, testing
+2024-09-12 12:43:46,807 - T:3	MAE	13.0666	RMSE	20.0989	MAPE	20.0952
+2024-09-12 12:43:47,462 - T:6	MAE	13.9737	RMSE	21.7404	MAPE	21.3215
+2024-09-12 12:43:49,273 - T:12	MAE	15.8737	RMSE	25.1678	MAPE	23.7392
+2024-09-12 12:43:49,273 - T:Avg	MAE	14.1223	RMSE	22.0075	MAPE	21.4481
+2024-09-12 12:43:49,275 - [*] No increasing nodes at year 2012, store model of the last year.
+2024-09-12 12:43:49,291 - [*] Year 2013 load from data/PEMS/FastData/2013.npz
+2024-09-12 12:43:49,298 - [*] load from log/PEMS/retrain_st_pems-43/2011/16.0545.pkl
+2024-09-12 12:43:50,622 - [*] loss:667.8593
+2024-09-12 12:43:50,648 - [*] year 2013, testing
+2024-09-12 12:43:51,005 - T:3	MAE	12.6171	RMSE	19.9098	MAPE	23.4463
+2024-09-12 12:43:51,843 - T:6	MAE	13.7374	RMSE	21.9939	MAPE	24.6511
+2024-09-12 12:43:54,100 - T:12	MAE	16.0343	RMSE	26.0414	MAPE	27.0569
+2024-09-12 12:43:54,101 - T:Avg	MAE	13.9032	RMSE	22.2424	MAPE	24.7615
+2024-09-12 12:43:54,104 - [*] No increasing nodes at year 2013, store model of the last year.
+2024-09-12 12:43:54,123 - [*] Year 2014 load from data/PEMS/FastData/2014.npz
+2024-09-12 12:43:54,128 - [*] load from log/PEMS/retrain_st_pems-43/2011/16.0545.pkl
+2024-09-12 12:43:55,572 - [*] loss:763.6757
+2024-09-12 12:43:55,606 - [*] year 2014, testing
+2024-09-12 12:43:56,083 - T:3	MAE	14.9200	RMSE	22.1838	MAPE	46.0460
+2024-09-12 12:43:56,825 - T:6	MAE	15.9175	RMSE	24.0850	MAPE	46.6871
+2024-09-12 12:43:58,862 - T:12	MAE	18.0174	RMSE	27.9003	MAPE	48.0592
+2024-09-12 12:43:58,862 - T:Avg	MAE	16.0707	RMSE	24.3310	MAPE	46.7028
+2024-09-12 12:43:58,864 - [*] No increasing nodes at year 2014, store model of the last year.
+2024-09-12 12:43:58,882 - [*] Year 2015 load from data/PEMS/FastData/2015.npz
+2024-09-12 12:43:58,892 - [*] load from log/PEMS/retrain_st_pems-43/2011/16.0545.pkl
+2024-09-12 12:44:00,237 - [*] loss:741.1948
+2024-09-12 12:44:00,278 - [*] year 2015, testing
+2024-09-12 12:44:00,714 - T:3	MAE	14.4935	RMSE	21.5103	MAPE	43.6505
+2024-09-12 12:44:01,484 - T:6	MAE	15.5154	RMSE	23.6134	MAPE	44.3446
+2024-09-12 12:44:03,561 - T:12	MAE	17.5335	RMSE	27.4843	MAPE	45.7575
+2024-09-12 12:44:03,561 - T:Avg	MAE	15.6416	RMSE	23.8117	MAPE	44.3580
+2024-09-12 12:44:03,563 - [*] No increasing nodes at year 2015, store model of the last year.
+2024-09-12 12:44:03,581 - [*] Year 2016 load from data/PEMS/FastData/2016.npz
+2024-09-12 12:44:03,591 - [*] load from log/PEMS/retrain_st_pems-43/2011/16.0545.pkl
+2024-09-12 12:44:04,906 - [*] loss:799.2784
+2024-09-12 12:44:04,939 - [*] year 2016, testing
+2024-09-12 12:44:05,323 - T:3	MAE	13.9623	RMSE	22.5129	MAPE	40.3340
+2024-09-12 12:44:06,117 - T:6	MAE	14.9444	RMSE	24.6594	MAPE	41.0119
+2024-09-12 12:44:08,286 - T:12	MAE	16.9510	RMSE	28.5051	MAPE	42.4120
+2024-09-12 12:44:08,286 - T:Avg	MAE	15.0847	RMSE	24.8233	MAPE	41.0327
+2024-09-12 12:44:08,288 - [*] No increasing nodes at year 2016, store model of the last year.
+2024-09-12 12:44:08,305 - [*] Year 2017 load from data/PEMS/FastData/2017.npz
+2024-09-12 12:44:08,311 - [*] load from log/PEMS/retrain_st_pems-43/2011/16.0545.pkl
+2024-09-12 12:44:09,587 - [*] loss:899.1848
+2024-09-12 12:44:09,615 - [*] year 2017, testing
+2024-09-12 12:44:09,958 - T:3	MAE	15.2839	RMSE	24.6441	MAPE	17.2332
+2024-09-12 12:44:10,659 - T:6	MAE	16.3162	RMSE	26.5795	MAPE	18.3297
+2024-09-12 12:44:12,827 - T:12	MAE	18.4521	RMSE	30.2768	MAPE	20.5490
+2024-09-12 12:44:12,827 - T:Avg	MAE	16.4806	RMSE	26.8016	MAPE	18.4746
+2024-09-12 12:44:12,829 - [*] No increasing nodes at year 2017, store model of the last year.
+2024-09-12 12:44:12,829 - 
+
+
+2024-09-12 12:44:12,829 - 3   	 MAE	     12.97	     13.07	     12.62	     14.92	     14.49	     13.96	     15.28		   13.90
+2024-09-12 12:44:12,829 - 3   	RMSE	     19.85	     20.10	     19.91	     22.18	     21.51	     22.51	     24.64		   21.53
+2024-09-12 12:44:12,829 - 3   	MAPE	     16.26	     20.10	     23.45	     46.05	     43.65	     40.33	     17.23		   29.58
+2024-09-12 12:44:12,829 - 6   	 MAE	     13.90	     13.97	     13.74	     15.92	     15.52	     14.94	     16.32		   14.90
+2024-09-12 12:44:12,829 - 6   	RMSE	     21.49	     21.74	     21.99	     24.09	     23.61	     24.66	     26.58		   23.45
+2024-09-12 12:44:12,829 - 6   	MAPE	     17.38	     21.32	     24.65	     46.69	     44.34	     41.01	     18.33		   30.53
+2024-09-12 12:44:12,829 - 12  	 MAE	     15.89	     15.87	     16.03	     18.02	     17.53	     16.95	     18.45		   16.96
+2024-09-12 12:44:12,829 - 12  	RMSE	     24.87	     25.17	     26.04	     27.90	     27.48	     28.51	     30.28		   27.18
+2024-09-12 12:44:12,829 - 12  	MAPE	     19.78	     23.74	     27.06	     48.06	     45.76	     42.41	     20.55		   32.48
+2024-09-12 12:44:12,830 - Avg 	 MAE	     14.07	     14.12	     13.90	     16.07	     15.64	     15.08	     16.48		   15.05
+2024-09-12 12:44:12,830 - Avg 	RMSE	     21.75	     22.01	     22.24	     24.33	     23.81	     24.82	     26.80		   23.68
+2024-09-12 12:44:12,830 - Avg 	MAPE	     17.57	     21.45	     24.76	     46.70	     44.36	     41.03	     18.47		   30.62
+2024-09-12 12:44:12,830 - total time: 0.0000

@@ -1,0 +1,122 @@
+2024-09-15 14:33:43,985 - logger name:log/AIR/oneline_st_an_air-47/oneline_st_an_air.log
+2024-09-15 14:33:43,985 - params : {'conf': 'new_conf/AIR/oneline_st_an_air.json', 'seed': 47, 'paral': 0, 'gpuid': 3, 'logname': 'oneline_st_an_air', 'method': 'TrafficStream', 'load_first_year': 0, 'first_year_model_path': 'log/PEMS/trafficstream-42/2011/16.6936.pkl', 'device': device(type='cuda', index=3), 'methods': {'TrafficStream': <class 'src.model.model.TrafficStream_Model'>, 'STKEC': <class 'src.model.model.STKEC_Model'>, 'EAC': <class 'src.model.model.EAC_Model'>}, 'begin_year': 2016, 'end_year': 2019, 'dropout': 0.0, 'lr': 0.03, 'batch_size': 128, 'epoch': 100, 'loss': 'mse', 'activation': 'relu', 'scheduler': 'epo', 'y_len': 12, 'x_len': 12, 'data_process': 0, 'raw_data_path': 'data/AIR/RawData/', 'save_data_path': 'data/AIR/FastData/', 'graph_path': 'data/AIR/graph/', 'model_path': 'log/AIR/', 'gcn': {'in_channel': 12, 'out_channel': 12, 'hidden_channel': 64}, 'tcn': {'in_channel': 1, 'out_channel': 1, 'kernel_size': 3, 'dilation': 1}, 'init': True, 'train': 1, 'auto_test': 0, 'strategy': 'retrain', 'detect': False, 'ewc': False, 'replay': False, 'path': 'log/AIR/oneline_st_an_air-47', 'logger': <Logger utils.initialize (INFO)>}
+2024-09-15 14:33:44,006 - [*] Year 2016 load from data/AIR/FastData/2016.npz
+2024-09-15 14:33:45,118 - [*] Year 2016 Dataset load!
+2024-09-15 14:33:45,120 - Total Parameters: 3308
+2024-09-15 14:33:45,120 - Trainable Parameters: 3308
+2024-09-15 14:33:45,121 - [*] Year 2016 Training start
+2024-09-15 14:33:46,148 - node number torch.Size([139136, 12])
+2024-09-15 14:33:49,765 - epoch:0, training loss:2852.1599 validation loss:21.0654
+2024-09-15 14:33:53,501 - epoch:1, training loss:1328.5157 validation loss:23.2603
+2024-09-15 14:33:57,305 - epoch:2, training loss:1285.3598 validation loss:20.7079
+2024-09-15 14:34:01,087 - epoch:3, training loss:1252.2869 validation loss:21.4468
+2024-09-15 14:34:04,957 - epoch:4, training loss:1236.8720 validation loss:19.6025
+2024-09-15 14:34:08,749 - epoch:5, training loss:1232.1322 validation loss:23.9732
+2024-09-15 14:34:12,520 - epoch:6, training loss:1207.0550 validation loss:24.6053
+2024-09-15 14:34:16,323 - epoch:7, training loss:1229.9719 validation loss:23.4794
+2024-09-15 14:34:20,161 - epoch:8, training loss:1205.0894 validation loss:20.2172
+2024-09-15 14:34:23,976 - epoch:9, training loss:1209.5869 validation loss:23.5119
+2024-09-15 14:34:27,852 - epoch:10, training loss:1209.8855 validation loss:22.5293
+2024-09-15 14:34:28,835 - [*] loss:2335.8789
+2024-09-15 14:34:28,866 - [*] year 2016, testing
+2024-09-15 14:34:29,278 - T:3	MAE	23.7743	RMSE	39.1234	MAPE	24.5050
+2024-09-15 14:34:30,004 - T:6	MAE	26.3840	RMSE	43.5155	MAPE	28.2922
+2024-09-15 14:34:32,204 - T:12	MAE	29.6955	RMSE	48.7143	MAPE	33.0133
+2024-09-15 14:34:32,204 - T:Avg	MAE	26.3038	RMSE	43.2151	MAPE	28.1845
+2024-09-15 14:34:32,206 - Finished optimization, total time:31.96 s, best model:log/AIR/oneline_st_an_air-47/2016/19.6025.pkl
+2024-09-15 14:34:32,232 - [*] Year 2017 load from data/AIR/FastData/2017.npz
+2024-09-15 14:34:33,264 - [*] Year 2017 Dataset load!
+2024-09-15 14:34:33,265 - [*] load from log/AIR/oneline_st_an_air-47/2016/19.6025.pkl
+2024-09-15 14:34:33,268 - Total Parameters: 3308
+2024-09-15 14:34:33,268 - Trainable Parameters: 3308
+2024-09-15 14:34:33,268 - [*] Year 2017 Training start
+2024-09-15 14:34:34,226 - node number torch.Size([147712, 12])
+2024-09-15 14:34:37,734 - epoch:0, training loss:1366.9547 validation loss:26.5673
+2024-09-15 14:34:42,071 - epoch:1, training loss:1228.6870 validation loss:25.0337
+2024-09-15 14:34:46,396 - epoch:2, training loss:1223.7948 validation loss:28.8858
+2024-09-15 14:34:50,742 - epoch:3, training loss:1222.7714 validation loss:26.1471
+2024-09-15 14:34:55,031 - epoch:4, training loss:1212.0588 validation loss:26.0107
+2024-09-15 14:34:59,359 - epoch:5, training loss:1202.0648 validation loss:27.6654
+2024-09-15 14:35:03,832 - epoch:6, training loss:1204.0595 validation loss:27.2182
+2024-09-15 14:35:08,396 - epoch:7, training loss:1204.5913 validation loss:27.8699
+2024-09-15 14:35:09,574 - [*] loss:1509.8699
+2024-09-15 14:35:09,604 - [*] year 2017, testing
+2024-09-15 14:35:09,988 - T:3	MAE	18.9099	RMSE	27.4223	MAPE	24.0144
+2024-09-15 14:35:10,761 - T:6	MAE	22.0617	RMSE	33.1451	MAPE	27.0982
+2024-09-15 14:35:12,976 - T:12	MAE	25.8147	RMSE	39.1451	MAPE	31.1911
+2024-09-15 14:35:12,976 - T:Avg	MAE	21.9162	RMSE	32.5508	MAPE	27.1511
+2024-09-15 14:35:12,978 - Finished optimization, total time:25.84 s, best model:log/AIR/oneline_st_an_air-47/2017/25.0337.pkl
+2024-09-15 14:35:13,009 - [*] Year 2018 load from data/AIR/FastData/2018.npz
+2024-09-15 14:35:14,046 - [*] Year 2018 Dataset load!
+2024-09-15 14:35:14,046 - [*] load from log/AIR/oneline_st_an_air-47/2017/25.0337.pkl
+2024-09-15 14:35:14,049 - Total Parameters: 3308
+2024-09-15 14:35:14,049 - Trainable Parameters: 3308
+2024-09-15 14:35:14,049 - [*] Year 2018 Training start
+2024-09-15 14:35:15,260 - node number torch.Size([152704, 12])
+2024-09-15 14:35:18,868 - epoch:0, training loss:1223.8744 validation loss:26.3098
+2024-09-15 14:35:23,378 - epoch:1, training loss:1134.3873 validation loss:26.8904
+2024-09-15 14:35:27,828 - epoch:2, training loss:1127.1601 validation loss:28.1036
+2024-09-15 14:35:32,541 - epoch:3, training loss:1121.4710 validation loss:28.3345
+2024-09-15 14:35:37,063 - epoch:4, training loss:1117.0454 validation loss:29.0786
+2024-09-15 14:35:41,557 - epoch:5, training loss:1116.5573 validation loss:27.7486
+2024-09-15 14:35:46,071 - epoch:6, training loss:1129.0458 validation loss:24.7883
+2024-09-15 14:35:50,562 - epoch:7, training loss:1109.6853 validation loss:23.8184
+2024-09-15 14:35:55,037 - epoch:8, training loss:1124.5650 validation loss:26.3726
+2024-09-15 14:35:59,598 - epoch:9, training loss:1116.2066 validation loss:25.4077
+2024-09-15 14:36:04,246 - epoch:10, training loss:1103.8262 validation loss:27.5103
+2024-09-15 14:36:08,732 - epoch:11, training loss:1108.1631 validation loss:26.8637
+2024-09-15 14:36:13,247 - epoch:12, training loss:1102.6102 validation loss:28.5073
+2024-09-15 14:36:17,708 - epoch:13, training loss:1116.8176 validation loss:28.6202
+2024-09-15 14:36:18,938 - [*] loss:1220.4924
+2024-09-15 14:36:18,972 - [*] year 2018, testing
+2024-09-15 14:36:19,345 - T:3	MAE	14.3413	RMSE	24.2027	MAPE	24.4139
+2024-09-15 14:36:20,094 - T:6	MAE	17.4605	RMSE	29.6293	MAPE	29.4559
+2024-09-15 14:36:22,285 - T:12	MAE	20.7454	RMSE	34.9973	MAPE	35.3061
+2024-09-15 14:36:22,285 - T:Avg	MAE	17.1665	RMSE	28.9742	MAPE	29.1328
+2024-09-15 14:36:22,287 - Finished optimization, total time:46.11 s, best model:log/AIR/oneline_st_an_air-47/2018/23.8184.pkl
+2024-09-15 14:36:22,316 - [*] Year 2019 load from data/AIR/FastData/2019.npz
+2024-09-15 14:36:23,363 - [*] Year 2019 Dataset load!
+2024-09-15 14:36:23,363 - [*] load from log/AIR/oneline_st_an_air-47/2018/23.8184.pkl
+2024-09-15 14:36:23,366 - Total Parameters: 3308
+2024-09-15 14:36:23,366 - Trainable Parameters: 3308
+2024-09-15 14:36:23,367 - [*] Year 2019 Training start
+2024-09-15 14:36:24,492 - node number torch.Size([153856, 12])
+2024-09-15 14:36:28,145 - epoch:0, training loss:913.0935 validation loss:22.1203
+2024-09-15 14:36:32,779 - epoch:1, training loss:880.1512 validation loss:22.4629
+2024-09-15 14:36:37,400 - epoch:2, training loss:875.9853 validation loss:22.3154
+2024-09-15 14:36:42,029 - epoch:3, training loss:878.5054 validation loss:23.7869
+2024-09-15 14:36:46,713 - epoch:4, training loss:871.0729 validation loss:22.6464
+2024-09-15 14:36:51,346 - epoch:5, training loss:868.0821 validation loss:20.0252
+2024-09-15 14:36:56,065 - epoch:6, training loss:870.2663 validation loss:23.0800
+2024-09-15 14:37:00,679 - epoch:7, training loss:871.2962 validation loss:21.8221
+2024-09-15 14:37:05,330 - epoch:8, training loss:872.3788 validation loss:22.3752
+2024-09-15 14:37:10,011 - epoch:9, training loss:871.0854 validation loss:22.1229
+2024-09-15 14:37:14,695 - epoch:10, training loss:867.6757 validation loss:21.2458
+2024-09-15 14:37:19,399 - epoch:11, training loss:865.2683 validation loss:21.8860
+2024-09-15 14:37:20,750 - [*] loss:1097.6917
+2024-09-15 14:37:20,785 - [*] year 2019, testing
+2024-09-15 14:37:21,172 - T:3	MAE	15.6705	RMSE	22.9938	MAPE	23.5841
+2024-09-15 14:37:21,945 - T:6	MAE	18.5065	RMSE	28.2089	MAPE	26.8655
+2024-09-15 14:37:24,238 - T:12	MAE	21.6689	RMSE	33.3606	MAPE	31.2526
+2024-09-15 14:37:24,238 - T:Avg	MAE	18.3172	RMSE	27.5737	MAPE	26.9176
+2024-09-15 14:37:24,239 - Finished optimization, total time:40.46 s, best model:log/AIR/oneline_st_an_air-47/2019/20.0252.pkl
+2024-09-15 14:37:24,249 - 
+
+
+2024-09-15 14:37:24,249 - 3   	 MAE	     23.77	     18.91	     14.34	     15.67		   18.17
+2024-09-15 14:37:24,250 - 3   	RMSE	     39.12	     27.42	     24.20	     22.99		   28.44
+2024-09-15 14:37:24,250 - 3   	MAPE	     24.51	     24.01	     24.41	     23.58		   24.13
+2024-09-15 14:37:24,250 - 6   	 MAE	     26.38	     22.06	     17.46	     18.51		   21.10
+2024-09-15 14:37:24,250 - 6   	RMSE	     43.52	     33.15	     29.63	     28.21		   33.62
+2024-09-15 14:37:24,250 - 6   	MAPE	     28.29	     27.10	     29.46	     26.87		   27.93
+2024-09-15 14:37:24,250 - 12  	 MAE	     29.70	     25.81	     20.75	     21.67		   24.48
+2024-09-15 14:37:24,250 - 12  	RMSE	     48.71	     39.15	     35.00	     33.36		   39.05
+2024-09-15 14:37:24,250 - 12  	MAPE	     33.01	     31.19	     35.31	     31.25		   32.69
+2024-09-15 14:37:24,250 - Avg 	 MAE	     26.30	     21.92	     17.17	     18.32		   20.93
+2024-09-15 14:37:24,250 - Avg 	RMSE	     43.22	     32.55	     28.97	     27.57		   33.08
+2024-09-15 14:37:24,250 - Avg 	MAPE	     28.18	     27.15	     29.13	     26.92		   27.85
+2024-09-15 14:37:24,250 - year	2016	total_time	   31.9611	average_time	    2.9056	epoch	11
+2024-09-15 14:37:24,250 - year	2017	total_time	   25.8386	average_time	    3.2298	epoch	8
+2024-09-15 14:37:24,250 - year	2018	total_time	   46.1103	average_time	    3.2936	epoch	14
+2024-09-15 14:37:24,250 - year	2019	total_time	   40.4583	average_time	    3.3715	epoch	12
+2024-09-15 14:37:24,250 - total time: 144.3682

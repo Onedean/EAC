@@ -1,0 +1,53 @@
+2024-09-29 20:00:13,550 - logger name:log/ENERGY-Wind/pretrain_st_energy-wind-43/pretrain_st_energy-wind.log
+2024-09-29 20:00:13,551 - params : {'conf': 'new_conf/ENERGY-Wind/pretrain_st_energy-wind.json', 'seed': 43, 'paral': 0, 'gpuid': 2, 'logname': 'pretrain_st_energy-wind', 'method': 'TrafficStream', 'load_first_year': 1, 'first_year_model_path': 'log/ENERGY-Wind/retrain_st_energy-wind-43/0/3.0333.pkl', 'device': device(type='cuda', index=2), 'methods': {'TrafficStream': <class 'src.model.model.TrafficStream_Model'>, 'STKEC': <class 'src.model.model.STKEC_Model'>, 'EAC': <class 'src.model.model.EAC_Model'>}, 'begin_year': 0, 'end_year': 3, 'dropout': 0.1, 'lr': 0.01, 'batch_size': 128, 'epoch': 100, 'loss': 'mse', 'activation': 'relu', 'scheduler': 'epo', 'y_len': 12, 'x_len': 12, 'data_process': 0, 'raw_data_path': 'data/ENERGY-Wind/RawData/', 'save_data_path': 'data/ENERGY-Wind/FastData/', 'graph_path': 'data/ENERGY-Wind/graph/', 'model_path': 'log/ENERGY-Wind/', 'gcn': {'in_channel': 12, 'out_channel': 12, 'hidden_channel': 64}, 'tcn': {'in_channel': 1, 'out_channel': 1, 'kernel_size': 3, 'dilation': 1}, 'init': False, 'train': 0, 'auto_test': 1, 'strategy': 'pretrain', 'detect': False, 'ewc': False, 'replay': False, 'path': 'log/ENERGY-Wind/pretrain_st_energy-wind-43', 'logger': <Logger utils.initialize (INFO)>}
+2024-09-29 20:00:13,554 - [*] Year 0 load from data/ENERGY-Wind/FastData/0.npz
+2024-09-29 20:00:13,781 - [*] load from log/ENERGY-Wind/retrain_st_energy-wind-43/0/3.0333.pkl
+2024-09-29 20:00:14,740 - [*] loss:31.9051
+2024-09-29 20:00:14,747 - [*] year 0, testing
+2024-09-29 20:00:14,813 - T:3	MAE	5.4479	RMSE	6.0034	MAPE	14.4319
+2024-09-29 20:00:14,952 - T:6	MAE	5.1796	RMSE	5.7812	MAPE	13.7316
+2024-09-29 20:00:15,340 - T:12	MAE	4.9809	RMSE	5.6720	MAPE	13.1689
+2024-09-29 20:00:15,340 - T:Avg	MAE	5.2940	RMSE	5.8947	MAPE	14.0167
+2024-09-29 20:00:15,345 - [*] Year 1 load from data/ENERGY-Wind/FastData/1.npz
+2024-09-29 20:00:15,345 - [*] load from log/ENERGY-Wind/retrain_st_energy-wind-43/0/3.0333.pkl
+2024-09-29 20:00:16,011 - [*] loss:21.8471
+2024-09-29 20:00:16,018 - [*] year 1, testing
+2024-09-29 20:00:16,057 - T:3	MAE	4.1807	RMSE	4.7876	MAPE	11.6580
+2024-09-29 20:00:16,129 - T:6	MAE	4.0199	RMSE	4.6598	MAPE	11.1824
+2024-09-29 20:00:16,358 - T:12	MAE	3.9635	RMSE	4.6855	MAPE	10.9488
+2024-09-29 20:00:16,358 - T:Avg	MAE	4.1316	RMSE	4.7742	MAPE	11.4792
+2024-09-29 20:00:16,358 - [*] No increasing nodes at year 1, store model of the last year.
+2024-09-29 20:00:16,363 - [*] Year 2 load from data/ENERGY-Wind/FastData/2.npz
+2024-09-29 20:00:16,363 - [*] load from log/ENERGY-Wind/retrain_st_energy-wind-43/0/3.0333.pkl
+2024-09-29 20:00:17,000 - [*] loss:117.5247
+2024-09-29 20:00:17,008 - [*] year 2, testing
+2024-09-29 20:00:17,055 - T:3	MAE	9.8262	RMSE	10.2351	MAPE	44.1220
+2024-09-29 20:00:17,138 - T:6	MAE	10.1335	RMSE	10.5707	MAPE	45.4906
+2024-09-29 20:00:17,435 - T:12	MAE	10.4046	RMSE	10.9057	MAPE	46.8501
+2024-09-29 20:00:17,435 - T:Avg	MAE	10.0281	RMSE	10.4709	MAPE	45.0652
+2024-09-29 20:00:17,436 - [*] No increasing nodes at year 2, store model of the last year.
+2024-09-29 20:00:17,440 - [*] Year 3 load from data/ENERGY-Wind/FastData/3.npz
+2024-09-29 20:00:17,440 - [*] load from log/ENERGY-Wind/retrain_st_energy-wind-43/0/3.0333.pkl
+2024-09-29 20:00:18,095 - [*] loss:574.1303
+2024-09-29 20:00:18,102 - [*] year 3, testing
+2024-09-29 20:00:18,154 - T:3	MAE	23.1945	RMSE	23.3689	MAPE	645.5146
+2024-09-29 20:00:18,243 - T:6	MAE	23.4946	RMSE	23.6849	MAPE	652.4850
+2024-09-29 20:00:18,539 - T:12	MAE	23.7506	RMSE	23.9786	MAPE	661.5054
+2024-09-29 20:00:18,539 - T:Avg	MAE	23.3875	RMSE	23.5816	MAPE	650.7992
+2024-09-29 20:00:18,539 - [*] No increasing nodes at year 3, store model of the last year.
+2024-09-29 20:00:18,539 - 
+
+
+2024-09-29 20:00:18,539 - 3   	 MAE	      5.45	      4.18	      9.83	     23.19		   10.66
+2024-09-29 20:00:18,539 - 3   	RMSE	      6.00	      4.79	     10.24	     23.37		   11.10
+2024-09-29 20:00:18,539 - 3   	MAPE	     14.43	     11.66	     44.12	    645.51		  178.93
+2024-09-29 20:00:18,540 - 6   	 MAE	      5.18	      4.02	     10.13	     23.49		   10.71
+2024-09-29 20:00:18,540 - 6   	RMSE	      5.78	      4.66	     10.57	     23.68		   11.17
+2024-09-29 20:00:18,540 - 6   	MAPE	     13.73	     11.18	     45.49	    652.48		  180.72
+2024-09-29 20:00:18,540 - 12  	 MAE	      4.98	      3.96	     10.40	     23.75		   10.77
+2024-09-29 20:00:18,540 - 12  	RMSE	      5.67	      4.69	     10.91	     23.98		   11.31
+2024-09-29 20:00:18,540 - 12  	MAPE	     13.17	     10.95	     46.85	    661.51		  183.12
+2024-09-29 20:00:18,540 - Avg 	 MAE	      5.29	      4.13	     10.03	     23.39		   10.71
+2024-09-29 20:00:18,540 - Avg 	RMSE	      5.89	      4.77	     10.47	     23.58		   11.18
+2024-09-29 20:00:18,540 - Avg 	MAPE	     14.02	     11.48	     45.07	    650.80		  180.34
+2024-09-29 20:00:18,540 - total time: 0.0000

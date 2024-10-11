@@ -1,0 +1,236 @@
+2024-10-01 13:48:09,096 - logger name:log/PEMS-K/eac_12-43/eac_12.log
+2024-10-01 13:48:09,096 - params : {'conf': 'new_conf/PEMS-K/eac_12.json', 'seed': 43, 'paral': 0, 'gpuid': 1, 'logname': 'eac_12', 'method': 'EAC', 'load_first_year': 0, 'first_year_model_path': 'log/PEMS/trafficstream-42/2011/16.6936.pkl', 'device': device(type='cuda', index=1), 'methods': {'TrafficStream': <class 'src.model.model.TrafficStream_Model'>, 'STKEC': <class 'src.model.model.STKEC_Model'>, 'EAC': <class 'src.model.model.EAC_Model'>, 'Universal': <class 'src.model.model.Universal_Model'>}, 'begin_year': 2011, 'end_year': 2017, 'dropout': 0.0, 'lr': 0.03, 'batch_size': 128, 'epoch': 100, 'loss': 'mse', 'activation': 'relu', 'scheduler': 'epo', 'y_len': 12, 'x_len': 12, 'data_process': 0, 'raw_data_path': 'data/PEMS/RawData/', 'save_data_path': 'data/PEMS/FastData/', 'graph_path': 'data/PEMS/graph/', 'model_path': 'log/PEMS-K/', 'gcn': {'in_channel': 12, 'out_channel': 12, 'hidden_channel': 64}, 'tcn': {'in_channel': 1, 'out_channel': 1, 'kernel_size': 3, 'dilation': 1}, 'rank': 12, 'init': True, 'train': 1, 'auto_test': 0, 'strategy': 'retrain', 'detect': False, 'ewc': False, 'replay': False, 'path': 'log/PEMS-K/eac_12-43', 'logger': <Logger utils.initialize (INFO)>}
+2024-10-01 13:48:09,109 - [*] Year 2011 load from data/PEMS/FastData/2011.npz
+2024-10-01 13:48:48,105 - [*] Year 2011 Dataset load!
+2024-10-01 13:48:48,132 - Total Parameters: 11312
+2024-10-01 13:48:48,132 - Trainable Parameters: 11312
+2024-10-01 13:48:48,133 - [*] Year 2011 Training start
+2024-10-01 13:48:50,266 - node number torch.Size([83840, 12])
+2024-10-01 13:49:01,683 - epoch:0, training loss:11664.3099 validation loss:29.6260
+2024-10-01 13:49:14,403 - epoch:1, training loss:1436.0942 validation loss:21.0334
+2024-10-01 13:49:29,044 - epoch:2, training loss:930.5293 validation loss:18.1370
+2024-10-01 13:49:44,674 - epoch:3, training loss:768.0540 validation loss:17.4792
+2024-10-01 13:49:59,469 - epoch:4, training loss:731.3214 validation loss:17.1047
+2024-10-01 13:50:15,096 - epoch:5, training loss:708.7920 validation loss:18.1219
+2024-10-01 13:50:30,438 - epoch:6, training loss:683.8324 validation loss:16.6287
+2024-10-01 13:50:46,395 - epoch:7, training loss:644.4539 validation loss:16.0018
+2024-10-01 13:51:02,605 - epoch:8, training loss:629.0312 validation loss:15.9769
+2024-10-01 13:51:19,085 - epoch:9, training loss:608.5536 validation loss:15.7789
+2024-10-01 13:51:35,738 - epoch:10, training loss:614.4727 validation loss:16.2131
+2024-10-01 13:51:53,483 - epoch:11, training loss:623.3165 validation loss:15.6408
+2024-10-01 13:52:11,364 - epoch:12, training loss:591.0899 validation loss:15.5297
+2024-10-01 13:52:28,898 - epoch:13, training loss:575.6217 validation loss:15.4459
+2024-10-01 13:52:45,382 - epoch:14, training loss:570.2709 validation loss:15.4018
+2024-10-01 13:53:01,331 - epoch:15, training loss:574.5814 validation loss:15.4018
+2024-10-01 13:53:15,344 - epoch:16, training loss:565.2574 validation loss:15.3869
+2024-10-01 13:53:31,323 - epoch:17, training loss:566.0779 validation loss:15.5844
+2024-10-01 13:53:48,047 - epoch:18, training loss:563.9953 validation loss:15.2952
+2024-10-01 13:54:05,180 - epoch:19, training loss:553.7913 validation loss:15.4441
+2024-10-01 13:54:21,207 - epoch:20, training loss:556.4206 validation loss:15.8121
+2024-10-01 13:54:37,607 - epoch:21, training loss:555.4833 validation loss:15.4346
+2024-10-01 13:54:53,864 - epoch:22, training loss:550.8716 validation loss:15.3311
+2024-10-01 13:55:10,004 - epoch:23, training loss:549.1015 validation loss:15.4137
+2024-10-01 13:55:26,169 - epoch:24, training loss:546.5112 validation loss:15.9495
+2024-10-01 13:55:29,596 - [*] loss:525.6385
+2024-10-01 13:55:29,623 - [*] year 2011, testing
+2024-10-01 13:55:29,933 - T:3	MAE	12.8773	RMSE	19.4862	MAPE	16.9287
+2024-10-01 13:55:50,580 - T:6	MAE	13.5809	RMSE	20.7088	MAPE	17.7094
+2024-10-01 13:55:54,267 - T:12	MAE	15.0238	RMSE	23.1240	MAPE	19.2697
+2024-10-01 13:55:54,268 - T:Avg	MAE	13.6882	RMSE	20.8633	MAPE	17.8462
+2024-10-01 13:55:54,269 - Finished optimization, total time:349.06 s, best model:log/PEMS-K/eac_12-43/2011/15.2952.pkl
+2024-10-01 13:55:54,345 - [*] Year 2012 load from data/PEMS/FastData/2012.npz
+2024-10-01 13:55:55,410 - [*] Year 2012 Dataset load!
+2024-10-01 13:55:55,410 - [*] load from log/PEMS-K/eac_12-43/2011/15.2952.pkl
+2024-10-01 13:55:55,701 - Total Parameters: 12032
+2024-10-01 13:55:55,701 - Trainable Parameters: 8724
+2024-10-01 13:55:55,701 - [*] Year 2012 Training start
+2024-10-01 13:55:58,070 - node number torch.Size([91520, 12])
+2024-10-01 13:56:01,873 - epoch:0, training loss:595.3226 validation loss:14.7894
+2024-10-01 13:56:07,684 - epoch:1, training loss:566.4713 validation loss:14.7051
+2024-10-01 13:56:13,247 - epoch:2, training loss:565.6409 validation loss:14.6572
+2024-10-01 13:56:19,464 - epoch:3, training loss:567.9139 validation loss:14.8200
+2024-10-01 13:56:25,211 - epoch:4, training loss:565.0135 validation loss:14.7131
+2024-10-01 13:56:30,696 - epoch:5, training loss:563.5376 validation loss:14.7500
+2024-10-01 13:56:37,127 - epoch:6, training loss:563.1888 validation loss:14.6963
+2024-10-01 13:56:43,148 - epoch:7, training loss:563.0056 validation loss:14.6696
+2024-10-01 13:56:48,970 - epoch:8, training loss:561.5801 validation loss:14.6223
+2024-10-01 13:56:55,029 - epoch:9, training loss:561.6087 validation loss:14.5955
+2024-10-01 13:57:01,073 - epoch:10, training loss:560.6893 validation loss:14.6247
+2024-10-01 13:57:06,670 - epoch:11, training loss:561.4280 validation loss:14.6401
+2024-10-01 13:57:12,813 - epoch:12, training loss:559.3527 validation loss:14.6086
+2024-10-01 13:57:18,445 - epoch:13, training loss:558.4531 validation loss:14.6113
+2024-10-01 13:57:24,070 - epoch:14, training loss:558.3878 validation loss:14.7255
+2024-10-01 13:57:30,061 - epoch:15, training loss:563.6644 validation loss:14.7629
+2024-10-01 13:57:32,526 - [*] loss:521.3511
+2024-10-01 13:57:35,955 - [*] year 2012, testing
+2024-10-01 13:57:36,806 - T:3	MAE	12.6132	RMSE	19.4621	MAPE	17.9110
+2024-10-01 13:57:40,725 - T:6	MAE	13.3192	RMSE	20.6780	MAPE	18.9019
+2024-10-01 13:57:44,026 - T:12	MAE	14.6655	RMSE	23.0187	MAPE	20.5475
+2024-10-01 13:57:44,026 - T:Avg	MAE	13.3951	RMSE	20.8099	MAPE	18.9877
+2024-10-01 13:57:44,102 - Finished optimization, total time:62.73 s, best model:log/PEMS-K/eac_12-43/2012/14.5955.pkl
+2024-10-01 13:57:44,130 - [*] Year 2013 load from data/PEMS/FastData/2013.npz
+2024-10-01 13:57:45,385 - [*] Year 2013 Dataset load!
+2024-10-01 13:57:45,385 - [*] load from log/PEMS-K/eac_12-43/2012/14.5955.pkl
+2024-10-01 13:57:45,489 - Total Parameters: 12884
+2024-10-01 13:57:45,489 - Trainable Parameters: 9576
+2024-10-01 13:57:45,490 - [*] Year 2013 Training start
+2024-10-01 13:57:47,467 - node number torch.Size([100608, 12])
+2024-10-01 13:57:53,324 - epoch:0, training loss:555.7265 validation loss:15.1771
+2024-10-01 13:57:59,753 - epoch:1, training loss:526.2750 validation loss:14.9370
+2024-10-01 13:58:05,900 - epoch:2, training loss:525.8535 validation loss:14.9250
+2024-10-01 13:58:12,406 - epoch:3, training loss:523.7791 validation loss:15.1034
+2024-10-01 13:58:18,161 - epoch:4, training loss:524.6233 validation loss:15.0467
+2024-10-01 13:58:24,664 - epoch:5, training loss:524.8289 validation loss:14.9790
+2024-10-01 13:58:30,915 - epoch:6, training loss:524.5057 validation loss:15.2013
+2024-10-01 13:58:36,176 - epoch:7, training loss:522.3380 validation loss:15.0072
+2024-10-01 13:58:42,212 - epoch:8, training loss:522.3979 validation loss:14.9452
+2024-10-01 13:58:46,018 - [*] loss:571.1409
+2024-10-01 13:58:46,147 - [*] year 2013, testing
+2024-10-01 13:58:46,804 - T:3	MAE	12.4369	RMSE	19.7873	MAPE	17.3756
+2024-10-01 13:58:47,602 - T:6	MAE	13.2301	RMSE	21.2264	MAPE	18.3454
+2024-10-01 13:58:50,503 - T:12	MAE	14.8572	RMSE	24.0777	MAPE	20.0757
+2024-10-01 13:58:50,503 - T:Avg	MAE	13.3482	RMSE	21.4059	MAPE	18.4616
+2024-10-01 13:58:50,505 - Finished optimization, total time:37.58 s, best model:log/PEMS-K/eac_12-43/2013/14.925.pkl
+2024-10-01 13:58:50,538 - [*] Year 2014 load from data/PEMS/FastData/2014.npz
+2024-10-01 13:58:51,669 - [*] Year 2014 Dataset load!
+2024-10-01 13:58:51,669 - [*] load from log/PEMS-K/eac_12-43/2013/14.925.pkl
+2024-10-01 13:58:51,815 - Total Parameters: 13316
+2024-10-01 13:58:51,816 - Trainable Parameters: 10008
+2024-10-01 13:58:51,816 - [*] Year 2014 Training start
+2024-10-01 13:58:53,761 - node number torch.Size([105216, 12])
+2024-10-01 13:58:58,213 - epoch:0, training loss:673.5654 validation loss:16.3138
+2024-10-01 13:59:04,786 - epoch:1, training loss:647.2029 validation loss:16.1104
+2024-10-01 13:59:09,802 - epoch:2, training loss:640.9707 validation loss:16.0016
+2024-10-01 13:59:16,789 - epoch:3, training loss:639.4516 validation loss:16.0678
+2024-10-01 13:59:22,013 - epoch:4, training loss:644.6053 validation loss:16.1581
+2024-10-01 13:59:27,775 - epoch:5, training loss:638.5991 validation loss:15.9904
+2024-10-01 13:59:32,960 - epoch:6, training loss:641.9387 validation loss:16.1391
+2024-10-01 13:59:40,052 - epoch:7, training loss:638.0621 validation loss:16.0402
+2024-10-01 13:59:45,307 - epoch:8, training loss:640.3328 validation loss:16.0008
+2024-10-01 13:59:53,150 - epoch:9, training loss:637.4186 validation loss:15.9592
+2024-10-01 14:00:00,300 - epoch:10, training loss:637.9656 validation loss:15.9899
+2024-10-01 14:00:07,807 - epoch:11, training loss:636.5259 validation loss:15.9667
+2024-10-01 14:00:14,517 - epoch:12, training loss:636.0570 validation loss:16.0224
+2024-10-01 14:00:20,689 - epoch:13, training loss:636.6853 validation loss:15.9432
+2024-10-01 14:00:26,161 - epoch:14, training loss:636.5489 validation loss:16.0027
+2024-10-01 14:00:31,847 - epoch:15, training loss:638.4188 validation loss:16.1422
+2024-10-01 14:00:38,191 - epoch:16, training loss:635.8187 validation loss:15.9514
+2024-10-01 14:00:43,710 - epoch:17, training loss:635.8838 validation loss:15.9733
+2024-10-01 14:00:49,406 - epoch:18, training loss:635.6099 validation loss:15.9740
+2024-10-01 14:00:56,859 - epoch:19, training loss:634.5841 validation loss:15.9098
+2024-10-01 14:01:04,240 - epoch:20, training loss:634.9878 validation loss:15.9614
+2024-10-01 14:01:12,044 - epoch:21, training loss:633.8563 validation loss:15.9462
+2024-10-01 14:01:20,139 - epoch:22, training loss:633.2111 validation loss:15.9410
+2024-10-01 14:01:27,555 - epoch:23, training loss:633.5626 validation loss:15.9385
+2024-10-01 14:01:33,624 - epoch:24, training loss:634.3556 validation loss:16.0617
+2024-10-01 14:01:40,261 - epoch:25, training loss:634.2520 validation loss:16.0724
+2024-10-01 14:01:43,010 - [*] loss:620.9836
+2024-10-01 14:01:46,852 - [*] year 2014, testing
+2024-10-01 14:01:48,091 - T:3	MAE	13.3714	RMSE	21.2654	MAPE	19.1150
+2024-10-01 14:01:53,102 - T:6	MAE	14.0860	RMSE	22.5236	MAPE	20.0054
+2024-10-01 14:02:00,355 - T:12	MAE	15.6403	RMSE	25.1762	MAPE	21.6356
+2024-10-01 14:02:00,356 - T:Avg	MAE	14.2101	RMSE	22.7089	MAPE	20.1247
+2024-10-01 14:02:00,383 - Finished optimization, total time:99.42 s, best model:log/PEMS-K/eac_12-43/2014/15.9098.pkl
+2024-10-01 14:02:00,502 - [*] Year 2015 load from data/PEMS/FastData/2015.npz
+2024-10-01 14:02:08,208 - [*] Year 2015 Dataset load!
+2024-10-01 14:02:08,208 - [*] load from log/PEMS-K/eac_12-43/2014/15.9098.pkl
+2024-10-01 14:02:08,247 - Total Parameters: 13460
+2024-10-01 14:02:08,247 - Trainable Parameters: 10152
+2024-10-01 14:02:08,248 - [*] Year 2015 Training start
+2024-10-01 14:02:11,244 - node number torch.Size([106752, 12])
+2024-10-01 14:02:15,298 - epoch:0, training loss:657.0095 validation loss:15.3115
+2024-10-01 14:02:22,607 - epoch:1, training loss:637.5673 validation loss:15.1736
+2024-10-01 14:02:30,281 - epoch:2, training loss:635.7515 validation loss:15.1230
+2024-10-01 14:02:38,807 - epoch:3, training loss:635.1910 validation loss:15.2073
+2024-10-01 14:02:47,267 - epoch:4, training loss:636.2180 validation loss:15.1513
+2024-10-01 14:02:53,823 - epoch:5, training loss:635.5510 validation loss:15.2026
+2024-10-01 14:03:01,166 - epoch:6, training loss:633.7102 validation loss:15.1378
+2024-10-01 14:03:08,686 - epoch:7, training loss:635.7418 validation loss:15.1551
+2024-10-01 14:03:15,496 - epoch:8, training loss:634.7523 validation loss:15.1956
+2024-10-01 14:03:18,609 - [*] loss:617.5699
+2024-10-01 14:03:20,312 - [*] year 2015, testing
+2024-10-01 14:03:21,017 - T:3	MAE	12.8569	RMSE	20.6677	MAPE	18.4897
+2024-10-01 14:03:25,962 - T:6	MAE	13.6741	RMSE	22.2351	MAPE	19.5415
+2024-10-01 14:03:32,469 - T:12	MAE	15.2499	RMSE	25.1116	MAPE	21.4017
+2024-10-01 14:03:32,469 - T:Avg	MAE	13.7721	RMSE	22.3814	MAPE	19.6684
+2024-10-01 14:03:32,502 - Finished optimization, total time:38.43 s, best model:log/PEMS-K/eac_12-43/2015/15.123.pkl
+2024-10-01 14:03:32,915 - [*] Year 2016 load from data/PEMS/FastData/2016.npz
+2024-10-01 14:03:35,033 - [*] Year 2016 Dataset load!
+2024-10-01 14:03:35,033 - [*] load from log/PEMS-K/eac_12-43/2015/15.123.pkl
+2024-10-01 14:03:35,038 - Total Parameters: 13652
+2024-10-01 14:03:35,038 - Trainable Parameters: 10344
+2024-10-01 14:03:35,038 - [*] Year 2016 Training start
+2024-10-01 14:03:38,608 - node number torch.Size([108800, 12])
+2024-10-01 14:03:43,472 - epoch:0, training loss:703.1740 validation loss:14.8382
+2024-10-01 14:03:50,454 - epoch:1, training loss:680.7834 validation loss:14.8628
+2024-10-01 14:03:58,378 - epoch:2, training loss:676.8328 validation loss:14.7991
+2024-10-01 14:04:05,722 - epoch:3, training loss:673.5038 validation loss:14.7387
+2024-10-01 14:04:12,983 - epoch:4, training loss:673.2914 validation loss:14.8569
+2024-10-01 14:04:20,367 - epoch:5, training loss:673.5551 validation loss:14.7495
+2024-10-01 14:04:28,294 - epoch:6, training loss:672.6031 validation loss:14.7260
+2024-10-01 14:04:35,239 - epoch:7, training loss:676.1536 validation loss:14.7859
+2024-10-01 14:04:42,865 - epoch:8, training loss:672.8472 validation loss:14.9925
+2024-10-01 14:04:51,551 - epoch:9, training loss:673.1249 validation loss:14.7353
+2024-10-01 14:04:59,436 - epoch:10, training loss:670.6948 validation loss:14.9005
+2024-10-01 14:05:06,326 - epoch:11, training loss:671.2500 validation loss:14.8098
+2024-10-01 14:05:13,056 - epoch:12, training loss:671.5940 validation loss:14.7428
+2024-10-01 14:05:17,195 - [*] loss:677.2098
+2024-10-01 14:05:19,353 - [*] year 2016, testing
+2024-10-01 14:05:21,493 - T:3	MAE	12.3045	RMSE	21.7658	MAPE	17.0382
+2024-10-01 14:05:28,933 - T:6	MAE	13.0870	RMSE	23.3833	MAPE	17.9526
+2024-10-01 14:05:37,845 - T:12	MAE	14.6399	RMSE	26.2469	MAPE	19.7102
+2024-10-01 14:05:37,845 - T:Avg	MAE	13.1923	RMSE	23.4986	MAPE	18.0875
+2024-10-01 14:05:37,875 - Finished optimization, total time:53.27 s, best model:log/PEMS-K/eac_12-43/2016/14.726.pkl
+2024-10-01 14:05:38,099 - [*] Year 2017 load from data/PEMS/FastData/2017.npz
+2024-10-01 14:05:40,394 - [*] Year 2017 Dataset load!
+2024-10-01 14:05:40,394 - [*] load from log/PEMS-K/eac_12-43/2016/14.726.pkl
+2024-10-01 14:05:40,400 - Total Parameters: 13904
+2024-10-01 14:05:40,400 - Trainable Parameters: 10596
+2024-10-01 14:05:40,401 - [*] Year 2017 Training start
+2024-10-01 14:05:44,000 - node number torch.Size([111488, 12])
+2024-10-01 14:05:50,168 - epoch:0, training loss:805.0274 validation loss:16.6441
+2024-10-01 14:05:59,724 - epoch:1, training loss:748.1201 validation loss:16.7647
+2024-10-01 14:06:08,627 - epoch:2, training loss:745.5043 validation loss:16.5186
+2024-10-01 14:06:17,282 - epoch:3, training loss:745.3876 validation loss:16.9951
+2024-10-01 14:06:25,979 - epoch:4, training loss:743.1571 validation loss:17.0624
+2024-10-01 14:06:34,466 - epoch:5, training loss:742.5452 validation loss:16.6016
+2024-10-01 14:06:43,191 - epoch:6, training loss:740.9123 validation loss:16.7686
+2024-10-01 14:06:51,575 - epoch:7, training loss:741.6546 validation loss:16.4764
+2024-10-01 14:06:58,171 - epoch:8, training loss:746.0101 validation loss:16.5827
+2024-10-01 14:07:04,828 - epoch:9, training loss:739.4792 validation loss:16.4440
+2024-10-01 14:07:11,125 - epoch:10, training loss:739.0115 validation loss:16.5744
+2024-10-01 14:07:17,168 - epoch:11, training loss:738.8879 validation loss:16.4518
+2024-10-01 14:07:22,488 - epoch:12, training loss:739.7764 validation loss:16.4937
+2024-10-01 14:07:28,266 - epoch:13, training loss:736.9928 validation loss:16.7107
+2024-10-01 14:07:36,163 - epoch:14, training loss:736.8767 validation loss:16.7955
+2024-10-01 14:07:44,163 - epoch:15, training loss:736.4683 validation loss:16.6191
+2024-10-01 14:07:48,071 - [*] loss:690.7145
+2024-10-01 14:07:48,213 - [*] year 2017, testing
+2024-10-01 14:07:48,774 - T:3	MAE	13.7353	RMSE	22.1464	MAPE	19.8060
+2024-10-01 14:07:50,536 - T:6	MAE	14.6186	RMSE	23.7200	MAPE	20.8893
+2024-10-01 14:07:57,216 - T:12	MAE	16.2383	RMSE	26.5109	MAPE	22.6673
+2024-10-01 14:07:57,216 - T:Avg	MAE	14.7022	RMSE	23.8427	MAPE	20.9695
+2024-10-01 14:07:57,220 - Finished optimization, total time:68.66 s, best model:log/PEMS-K/eac_12-43/2017/16.444.pkl
+2024-10-01 14:07:57,238 - 
+
+
+2024-10-01 14:07:57,238 - 3   	 MAE	     12.88	     12.61	     12.44	     13.37	     12.86	     12.30	     13.74		   12.89
+2024-10-01 14:07:57,238 - 3   	RMSE	     19.49	     19.46	     19.79	     21.27	     20.67	     21.77	     22.15		   20.65
+2024-10-01 14:07:57,238 - 3   	MAPE	     16.93	     17.91	     17.38	     19.11	     18.49	     17.04	     19.81		   18.09
+2024-10-01 14:07:57,238 - 6   	 MAE	     13.58	     13.32	     13.23	     14.09	     13.67	     13.09	     14.62		   13.66
+2024-10-01 14:07:57,239 - 6   	RMSE	     20.71	     20.68	     21.23	     22.52	     22.24	     23.38	     23.72		   22.07
+2024-10-01 14:07:57,239 - 6   	MAPE	     17.71	     18.90	     18.35	     20.01	     19.54	     17.95	     20.89		   19.05
+2024-10-01 14:07:57,239 - 12  	 MAE	     15.02	     14.67	     14.86	     15.64	     15.25	     14.64	     16.24		   15.19
+2024-10-01 14:07:57,239 - 12  	RMSE	     23.12	     23.02	     24.08	     25.18	     25.11	     26.25	     26.51		   24.75
+2024-10-01 14:07:57,239 - 12  	MAPE	     19.27	     20.55	     20.08	     21.64	     21.40	     19.71	     22.67		   20.76
+2024-10-01 14:07:57,239 - Avg 	 MAE	     13.69	     13.40	     13.35	     14.21	     13.77	     13.19	     14.70		   13.76
+2024-10-01 14:07:57,239 - Avg 	RMSE	     20.86	     20.81	     21.41	     22.71	     22.38	     23.50	     23.84		   22.22
+2024-10-01 14:07:57,239 - Avg 	MAPE	     17.85	     18.99	     18.46	     20.12	     19.67	     18.09	     20.97		   19.16
+2024-10-01 14:07:57,239 - year	2011	total_time	  349.0647	average_time	   13.9626	epoch	25
+2024-10-01 14:07:57,240 - year	2012	total_time	   62.7283	average_time	    3.9205	epoch	16
+2024-10-01 14:07:57,240 - year	2013	total_time	   37.5849	average_time	    4.1761	epoch	9
+2024-10-01 14:07:57,240 - year	2014	total_time	   99.4238	average_time	    3.8240	epoch	26
+2024-10-01 14:07:57,240 - year	2015	total_time	   38.4325	average_time	    4.2703	epoch	9
+2024-10-01 14:07:57,240 - year	2016	total_time	   53.2663	average_time	    4.0974	epoch	13
+2024-10-01 14:07:57,240 - year	2017	total_time	   68.6613	average_time	    4.2914	epoch	16
+2024-10-01 14:07:57,240 - total time: 709.1618
