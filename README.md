@@ -15,7 +15,7 @@
 
 > ⭐ EAC is a method for exploring the **rapid adaptation** of models in the face of open environment **dynamic spatio-temporal graph changes** during the **Supervised Finetuning Phase**.
 
-**[<a href="https://openreview.net/pdf?id=FRzCIlkM7I">Paper Page</a>]**
+**[<a href="https://openreview.net/pdf?id=FRzCIlkM7I">Paper Page</a>]** By [Citymind LAB](https://citymind.top) <img src="./asset/citymind.png" alt="图标" style="width: 108px; height: 20px;">, [HKUST(GZ)](https://www.hkust-gz.edu.cn/) <img src="./asset/hkust-gz.png" alt="图标" style="width: 20px; height: 20px;">.
 <!-- **[<a href="#">中文解读</a>]** -->
 
 </div>
@@ -39,7 +39,7 @@ Spatio-temporal forecasting in streaming scenarios faces dual challenges: the in
 To address these challenges, we propose a novel prompt tuning-based continuous forecasting method, EAC, following two fundamental tuning principles guided by empirical and theoretical analysis: expand and compress, which effectively resolve the aforementioned problems with lightweight tuning parameters.
 
 <p align="center">
-    <img src="asset/intro.png" alt="" align="center" width="2000px" />
+    <img src="./asset/intro.png" alt="" align="center" width="2000px" />
 </p>
 
 
