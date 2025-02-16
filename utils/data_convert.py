@@ -38,7 +38,10 @@ def generate_samples(days, savepath, data, graph, train_rate=0.6, val_rate=0.2, 
     """
     edge_index = np.array(list(graph.edges)).T  # Get the edge index of the graph and transpose it
     del graph
-    data = data[0:days*288, :]  # Extract data based on days
+    
+    if savepath.split('/')[1] =='PEMS':
+        data = data[0:days*288, :]  # Extract data based on days
+    
     t, n = data.shape[0], data.shape[1]  # Get the time step and number of nodes of the data
     
     # Split the training, validation, and test set indices according to the ratio

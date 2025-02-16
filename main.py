@@ -16,7 +16,7 @@ from src.model import replay
 
 from utils.initialize import init, seed_anything, init_log
 from utils.common_tools import mkdirs, load_best_model, long_term_pattern
-from src.trainer.trafficstream_trainer import train, test_model
+from trainer.default_trainer import train, test_model
 
 
 def main(args):
