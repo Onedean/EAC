@@ -27,7 +27,7 @@
 
 ## Updates/News:
 
-🚩 **News** (Feb 2025): EAC's code, data, weights, and training logs are fully open source! Let's try to improve on this! 😊
+🚩 **News** (Feb 2025): EAC's code, data, weights, and training logs are fully open source! Try to improve on this! 😊
 
 🚩 **News** (Jan 2025): EAC has been accpeted by ICLR 2025! ✅
 
