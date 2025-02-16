@@ -17,9 +17,10 @@
 > ⭐ EAC is a method for exploring the **rapid adaptation** of models in the face of open environment **dynamic spatio-temporal graph changes** during the **Supervised Finetuning Phase**.
 
 **[<a href="https://openreview.net/pdf?id=FRzCIlkM7I">Paper Page</a>]**
+**[<a href="./asset/EAC_presentation.pdf">Presentation Slide</a>]**
 
 By [Citymind LAB](https://citymind.top) <img src="./asset/citymind.png" alt="图标" style="width: 108px; height: 20px;">, [HKUST(GZ)](https://www.hkust-gz.edu.cn/) <img src="./asset/hkust-gz.png" alt="图标" style="width: 20px; height: 20px;">.
-**[<a href="./asset/EAC_presentation.pdf">Presentation Slide</a>]**
+
 
 </div>
 
