@@ -76,7 +76,7 @@ conda env create -f environment.yaml
 1. You can run a specific method on a specific dataset separately, for example, run the EAC method on the PEMS-Stream dataset:
 
 ```python
-python main.py --conf conf/PEMS/eac.json --gpuid 0 --seed 53
+python main.py --conf conf/PEMS/eac.json --gpuid 0 --seed 43
 ```
 
 2. Or you can run the script to batch execute all baseline methods on a specified dataset, for example, run all baseline methods on the PEMS-Stream dataset:
