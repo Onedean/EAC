@@ -6,8 +6,8 @@
 
 ![](https://img.shields.io/github/last-commit/EAC/EAC?color=green)
 ![](https://img.shields.io/github/stars/EAC/EAC?color=yellow)
-![](https://img.shields.io/github/forks/EAC/EAC?color=lightblue)
-![](https://img.shields.io/badge/PRs-Welcome-green)
+[![Maintenance](https://img.shields.io/badge/Maintained%3F-yes-green.svg)](https://GitHub.com/Naereen/StrapDown.js/graphs/commit-activity)
+[![PR's Welcome](https://img.shields.io/badge/PRs-welcome-brightgreen.svg?style=flat)](http://makeapullrequest.com)
 
 </div>
 
@@ -71,6 +71,7 @@ torch-geometric = 1.6.3
 
 ```shell
 conda env create -f environment.yaml
+conda activate stg
 ```
 
 ### Usages
@@ -107,8 +108,7 @@ sh scripts/pems_run.sh
 
 ## Citation
 
-> 🌟 If you find the EAC helpful in your research, please consider to star this repository and cite the
-> corresponding [paper](https://openreview.net/pdf?id=FRzCIlkM7I):
+> 🌟 If you find the EAC helpful in your research, please consider to star this repository and cite this [paper](https://openreview.net/pdf?id=FRzCIlkM7I):
 
 ```
 @inproceedings{chen2025eac,
