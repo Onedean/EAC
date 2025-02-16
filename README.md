@@ -4,8 +4,8 @@
 
 <div align="center">
 
-![](https://img.shields.io/github/last-commit/EAC/EAC?color=green)
-![](https://img.shields.io/github/stars/EAC/EAC?color=yellow)
+![](https://img.shields.io/github/last-commit/onedean/EAC?color=green)
+![](https://img.shields.io/github/stars/onedean/EAC?color=yellow)
 [![Maintenance](https://img.shields.io/badge/Maintained%3F-yes-green.svg)](https://GitHub.com/Naereen/StrapDown.js/graphs/commit-activity)
 [![PR's Welcome](https://img.shields.io/badge/PRs-welcome-brightgreen.svg?style=flat)](http://makeapullrequest.com)
 
