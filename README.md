@@ -26,7 +26,6 @@ By [Citymind LAB](https://citymind.top) <img src="./asset/citymind.png" alt="图
 
 
 ## TODO List
-- [ ] Upload the dataset to Google Drive
 - [ ] Transfer the dataset to the hugging face for easy download using commands
 
 ## Updates/News:
@@ -50,7 +49,7 @@ To address these challenges, we propose a novel prompt tuning-based continuous f
 
 ## 📚 Training Data
 
-Our datasets are available on [Google Drive](#).
+Our datasets are available on [Google Drive](https://drive.google.com/drive/folders/1OiMLuFBdc56CLekileRjH0xyhDWuoC6C?usp=drive_link).
 
 Please download all processed datasets and place them in the [data folder](./data).
 
