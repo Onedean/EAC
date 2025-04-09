@@ -26,7 +26,7 @@
 
 ## Todo List:
 
-- [ ] We plan to release a basic space-time model (much more advanced than what we have now) in the coming months, so stay tuned! 🤫
+- [ ] We plan to release a spatio-temporal foundation model (much more advanced than what we have now) in the coming months, so stay tuned! 🤫
 
 
 ## Updates/News:
