@@ -48,12 +48,11 @@ To address these challenges, we propose a novel prompt tuning-based continuous f
 
 ## 📚 Training Data
 
+[Important]: Now, the processed dataset can be directly accessed from the [cloud disk](https://hkustgz-my.sharepoint.com/:f:/g/personal/wchen110_connect_hkust-gz_edu_cn/EuiKtt95qnpNgOngXAV_MmABWYyEBh74ooM94kdycwg4Sw?e=ZRCC1n)!
+
 Our datasets are available on [Google Drive](https://drive.google.com/drive/folders/1OiMLuFBdc56CLekileRjH0xyhDWuoC6C?usp=drive_link).
 
 Please download all processed datasets and place them in the [data folder](./data).
-
-We plan to place them on the hugging face for easy command download and direct use.
-
 
 ## 🚀 Getting Started
 
