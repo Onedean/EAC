@@ -25,14 +25,13 @@
 </div>
 
 
-## TODO List
-- [ ] Transfer the dataset to the hugging face for easy download using commands
-
 ## Updates/News:
 
-🚩 **News** (Feb 2025): EAC's code, data, weights, and training logs are fully open source! Try to improve on this! 😊
+🚩 **News** (Apr. 2025): We upload all processed complete datasets to the [cloud disk](https://hkustgz-my.sharepoint.com/:f:/g/personal/wchen110_connect_hkust-gz_edu_cn/EuiKtt95qnpNgOngXAV_MmABWYyEBh74ooM94kdycwg4Sw?e=ZRCC1n), and you can download them directly to avoid the difficulty of reproducing the processing problems! 😎
 
-🚩 **News** (Jan 2025): EAC has been accpeted by ICLR 2025! ✅
+🚩 **News** (Feb. 2025): EAC's code, data, weights, and training logs are fully open source! Try to improve on this! 😊
+
+🚩 **News** (Jan. 2025): EAC has been accpeted by ICLR 2025! ✅
 
 
 

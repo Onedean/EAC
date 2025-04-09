@@ -1,123 +1,123 @@
-2024-09-14 23:16:50,889 - logger name:log/AIR/eac-43/eac.log
-2024-09-14 23:16:50,889 - params : {'conf': 'new_conf/AIR/eac.json', 'seed': 43, 'paral': 0, 'gpuid': 0, 'logname': 'eac', 'method': 'EAC', 'load_first_year': 0, 'first_year_model_path': 'log/PEMS/trafficstream-42/2011/16.6936.pkl', 'device': device(type='cuda', index=0), 'methods': {'TrafficStream': <class 'src.model.model.TrafficStream_Model'>, 'STKEC': <class 'src.model.model.STKEC_Model'>, 'EAC': <class 'src.model.model.EAC_Model'>}, 'begin_year': 2016, 'end_year': 2019, 'dropout': 0.0, 'lr': 0.03, 'batch_size': 128, 'epoch': 100, 'loss': 'mse', 'activation': 'relu', 'scheduler': 'epo', 'y_len': 12, 'x_len': 12, 'data_process': 0, 'raw_data_path': 'data/AIR/RawData/', 'save_data_path': 'data/AIR/FastData/', 'graph_path': 'data/AIR/graph/', 'model_path': 'log/AIR/', 'gcn': {'in_channel': 12, 'out_channel': 12, 'hidden_channel': 64}, 'tcn': {'in_channel': 1, 'out_channel': 1, 'kernel_size': 3, 'dilation': 1}, 'rank': 6, 'init': True, 'train': 1, 'auto_test': 0, 'strategy': 'retrain', 'detect': False, 'ewc': False, 'replay': False, 'path': 'log/AIR/eac-43', 'logger': <Logger utils.initialize (INFO)>}
-2024-09-14 23:16:50,909 - [*] Year 2016 load from data/AIR/FastData/2016.npz
-2024-09-14 23:16:52,003 - [*] Year 2016 Dataset load!
-2024-09-14 23:16:52,005 - Total Parameters: 9902
-2024-09-14 23:16:52,005 - Trainable Parameters: 9902
-2024-09-14 23:16:52,005 - [*] Year 2016 Training start
-2024-09-14 23:16:53,008 - node number torch.Size([139136, 12])
-2024-09-14 23:16:56,679 - epoch:0, training loss:2957.5410 validation loss:18.8490
-2024-09-14 23:17:00,425 - epoch:1, training loss:1355.2061 validation loss:23.3241
-2024-09-14 23:17:04,232 - epoch:2, training loss:1250.9616 validation loss:20.7024
-2024-09-14 23:17:08,086 - epoch:3, training loss:1212.7895 validation loss:20.9282
-2024-09-14 23:17:12,036 - epoch:4, training loss:1217.7265 validation loss:25.9255
-2024-09-14 23:17:15,843 - epoch:5, training loss:1245.2142 validation loss:27.0168
-2024-09-14 23:17:19,651 - epoch:6, training loss:1214.1428 validation loss:17.6793
-2024-09-14 23:17:23,476 - epoch:7, training loss:1209.3806 validation loss:19.3467
-2024-09-14 23:17:27,335 - epoch:8, training loss:1200.8879 validation loss:19.7007
-2024-09-14 23:17:31,132 - epoch:9, training loss:1173.7521 validation loss:20.9567
-2024-09-14 23:17:35,042 - epoch:10, training loss:1233.8502 validation loss:26.9372
-2024-09-14 23:17:38,830 - epoch:11, training loss:1175.1357 validation loss:21.7907
-2024-09-14 23:17:42,638 - epoch:12, training loss:1152.6562 validation loss:21.2913
-2024-09-14 23:17:43,604 - [*] loss:2452.0532
-2024-09-14 23:17:43,634 - [*] year 2016, testing
-2024-09-14 23:17:44,027 - T:3	MAE	25.8323	RMSE	40.9735	MAPE	26.2298
-2024-09-14 23:17:44,760 - T:6	MAE	28.0841	RMSE	45.2919	MAPE	29.2814
-2024-09-14 23:17:46,938 - T:12	MAE	30.8121	RMSE	49.9504	MAPE	33.3049
-2024-09-14 23:17:46,938 - T:Avg	MAE	27.9918	RMSE	44.8870	MAPE	29.2662
-2024-09-14 23:17:46,940 - Finished optimization, total time:38.78 s, best model:log/AIR/eac-43/2016/17.6793.pkl
-2024-09-14 23:17:46,967 - [*] Year 2017 load from data/AIR/FastData/2017.npz
-2024-09-14 23:17:47,956 - [*] Year 2017 Dataset load!
-2024-09-14 23:17:47,957 - [*] load from log/AIR/eac-43/2016/17.6793.pkl
-2024-09-14 23:17:47,965 - Total Parameters: 10304
-2024-09-14 23:17:47,966 - Trainable Parameters: 6996
-2024-09-14 23:17:47,966 - [*] Year 2017 Training start
-2024-09-14 23:17:48,925 - node number torch.Size([147712, 12])
-2024-09-14 23:17:50,629 - epoch:0, training loss:1236.6592 validation loss:26.9795
-2024-09-14 23:17:53,249 - epoch:1, training loss:1224.9294 validation loss:26.8524
-2024-09-14 23:17:55,900 - epoch:2, training loss:1192.1740 validation loss:26.5103
-2024-09-14 23:17:58,544 - epoch:3, training loss:1208.9771 validation loss:26.1049
-2024-09-14 23:18:01,110 - epoch:4, training loss:1194.7141 validation loss:25.5548
-2024-09-14 23:18:03,880 - epoch:5, training loss:1197.6161 validation loss:26.7293
-2024-09-14 23:18:06,525 - epoch:6, training loss:1199.4811 validation loss:26.5001
-2024-09-14 23:18:09,084 - epoch:7, training loss:1184.7291 validation loss:26.3603
-2024-09-14 23:18:11,838 - epoch:8, training loss:1189.3395 validation loss:27.0058
-2024-09-14 23:18:14,389 - epoch:9, training loss:1189.9643 validation loss:26.3978
-2024-09-14 23:18:17,012 - epoch:10, training loss:1187.0061 validation loss:25.9372
-2024-09-14 23:18:18,156 - [*] loss:1459.7632
-2024-09-14 23:18:18,203 - [*] year 2017, testing
-2024-09-14 23:18:18,590 - T:3	MAE	18.5920	RMSE	27.2953	MAPE	22.5183
-2024-09-14 23:18:19,359 - T:6	MAE	21.8791	RMSE	32.9963	MAPE	26.1761
-2024-09-14 23:18:21,514 - T:12	MAE	25.3713	RMSE	38.4884	MAPE	30.5745
-2024-09-14 23:18:21,514 - T:Avg	MAE	21.6087	RMSE	32.2714	MAPE	26.0616
-2024-09-14 23:18:21,516 - Finished optimization, total time:16.64 s, best model:log/AIR/eac-43/2017/25.5548.pkl
-2024-09-14 23:18:21,556 - [*] Year 2018 load from data/AIR/FastData/2018.npz
-2024-09-14 23:18:22,588 - [*] Year 2018 Dataset load!
-2024-09-14 23:18:22,588 - [*] load from log/AIR/eac-43/2017/25.5548.pkl
-2024-09-14 23:18:22,592 - Total Parameters: 10538
-2024-09-14 23:18:22,592 - Trainable Parameters: 7230
-2024-09-14 23:18:22,592 - [*] Year 2018 Training start
-2024-09-14 23:18:23,646 - node number torch.Size([152704, 12])
-2024-09-14 23:18:25,401 - epoch:0, training loss:1121.3901 validation loss:27.2407
-2024-09-14 23:18:28,123 - epoch:1, training loss:1092.4781 validation loss:26.1559
-2024-09-14 23:18:30,762 - epoch:2, training loss:1111.4902 validation loss:27.0029
-2024-09-14 23:18:33,425 - epoch:3, training loss:1106.1124 validation loss:27.4821
-2024-09-14 23:18:36,257 - epoch:4, training loss:1089.4667 validation loss:26.7597
-2024-09-14 23:18:38,968 - epoch:5, training loss:1097.8082 validation loss:26.7302
-2024-09-14 23:18:41,653 - epoch:6, training loss:1085.2782 validation loss:26.3397
-2024-09-14 23:18:44,244 - epoch:7, training loss:1104.5844 validation loss:26.1515
-2024-09-14 23:18:46,975 - epoch:8, training loss:1092.3654 validation loss:26.8346
-2024-09-14 23:18:49,644 - epoch:9, training loss:1088.9546 validation loss:26.8419
-2024-09-14 23:18:52,483 - epoch:10, training loss:1108.4559 validation loss:27.3995
-2024-09-14 23:18:55,192 - epoch:11, training loss:1093.3028 validation loss:26.8568
-2024-09-14 23:18:57,834 - epoch:12, training loss:1093.8538 validation loss:26.7456
-2024-09-14 23:19:00,579 - epoch:13, training loss:1085.2561 validation loss:27.2735
-2024-09-14 23:19:01,691 - [*] loss:1096.6505
-2024-09-14 23:19:01,732 - [*] year 2018, testing
-2024-09-14 23:19:02,113 - T:3	MAE	12.9520	RMSE	22.4637	MAPE	21.1685
-2024-09-14 23:19:02,844 - T:6	MAE	16.1788	RMSE	27.8429	MAPE	26.4578
-2024-09-14 23:19:05,019 - T:12	MAE	19.5849	RMSE	33.1721	MAPE	32.5077
-2024-09-14 23:19:05,019 - T:Avg	MAE	15.8599	RMSE	27.1579	MAPE	26.0709
-2024-09-14 23:19:05,021 - Finished optimization, total time:21.49 s, best model:log/AIR/eac-43/2018/26.1515.pkl
-2024-09-14 23:19:05,068 - [*] Year 2019 load from data/AIR/FastData/2019.npz
-2024-09-14 23:19:06,107 - [*] Year 2019 Dataset load!
-2024-09-14 23:19:06,107 - [*] load from log/AIR/eac-43/2018/26.1515.pkl
-2024-09-14 23:19:06,110 - Total Parameters: 10592
-2024-09-14 23:19:06,110 - Trainable Parameters: 7284
-2024-09-14 23:19:06,111 - [*] Year 2019 Training start
-2024-09-14 23:19:07,131 - node number torch.Size([153856, 12])
-2024-09-14 23:19:08,833 - epoch:0, training loss:868.9393 validation loss:21.6125
-2024-09-14 23:19:11,512 - epoch:1, training loss:857.6568 validation loss:21.3371
-2024-09-14 23:19:14,153 - epoch:2, training loss:857.3685 validation loss:21.5689
-2024-09-14 23:19:16,817 - epoch:3, training loss:857.4542 validation loss:22.0741
-2024-09-14 23:19:19,478 - epoch:4, training loss:857.8954 validation loss:21.8872
-2024-09-14 23:19:22,262 - epoch:5, training loss:856.7800 validation loss:21.6160
-2024-09-14 23:19:24,938 - epoch:6, training loss:856.3708 validation loss:21.3859
-2024-09-14 23:19:27,539 - epoch:7, training loss:855.0915 validation loss:21.9344
-2024-09-14 23:19:28,703 - [*] loss:1028.4026
-2024-09-14 23:19:28,749 - [*] year 2019, testing
-2024-09-14 23:19:29,133 - T:3	MAE	14.7989	RMSE	22.3495	MAPE	21.7372
-2024-09-14 23:19:29,885 - T:6	MAE	17.6974	RMSE	27.3882	MAPE	25.8194
-2024-09-14 23:19:32,142 - T:12	MAE	20.8981	RMSE	32.3132	MAPE	30.9893
-2024-09-14 23:19:32,142 - T:Avg	MAE	17.4816	RMSE	26.7433	MAPE	25.7436
-2024-09-14 23:19:32,144 - Finished optimization, total time:12.33 s, best model:log/AIR/eac-43/2019/21.3371.pkl
-2024-09-14 23:19:32,153 - 
+2025-03-18 21:15:10,204 - logger name:log/AIR/eac-43/eac.log
+2025-03-18 21:15:10,204 - params : {'conf': 'conf/AIR/eac.json', 'seed': 43, 'paral': 0, 'gpuid': 0, 'logname': 'eac', 'method': 'EAC', 'load_first_year': 0, 'first_year_model_path': 'log/PEMS/trafficstream-42/2011/16.6936.pkl', 'device': device(type='cuda', index=0), 'methods': {'TrafficStream': <class 'src.model.model.TrafficStream_Model'>, 'STKEC': <class 'src.model.model.STKEC_Model'>, 'EAC': <class 'src.model.model.EAC_Model'>, 'Universal': <class 'src.model.model.Universal_Model'>}, 'begin_year': 2016, 'end_year': 2019, 'dropout': 0.0, 'lr': 0.03, 'batch_size': 128, 'epoch': 100, 'loss': 'mse', 'activation': 'relu', 'scheduler': 'epo', 'y_len': 12, 'x_len': 12, 'data_process': 0, 'raw_data_path': '../../../data/weichen/TrafficStream_data/AIR/RawData/', 'save_data_path': '../../../data/weichen/TrafficStream_data/AIR/FastData/', 'graph_path': '../../../data/weichen/TrafficStream_data/AIR/graph/', 'model_path': 'log/AIR/', 'gcn': {'in_channel': 12, 'out_channel': 12, 'hidden_channel': 64}, 'tcn': {'in_channel': 1, 'out_channel': 1, 'kernel_size': 3, 'dilation': 1}, 'rank': 6, 'init': True, 'train': 1, 'auto_test': 0, 'strategy': 'retrain', 'detect': False, 'ewc': False, 'replay': False, 'path': 'log/AIR/eac-43', 'logger': <Logger utils.initialize (INFO)>}
+2025-03-18 21:15:10,228 - [*] Year 2016 load from ../../../data/weichen/TrafficStream_data/AIR/FastData/2016.npz
+2025-03-18 21:15:11,589 - [*] Year 2016 Dataset load!
+2025-03-18 21:15:11,644 - Total Parameters: 9902
+2025-03-18 21:15:11,644 - Trainable Parameters: 9902
+2025-03-18 21:15:11,644 - [*] Year 2016 Training start
+2025-03-18 21:15:12,362 - node number torch.Size([139136, 12])
+2025-03-18 21:15:27,880 - epoch:0, training loss:2957.5410 validation loss:18.8490
+2025-03-18 21:15:38,938 - epoch:1, training loss:1355.2061 validation loss:23.3241
+2025-03-18 21:15:49,516 - epoch:2, training loss:1250.9616 validation loss:20.7024
+2025-03-18 21:16:00,068 - epoch:3, training loss:1212.7895 validation loss:20.9282
+2025-03-18 21:16:10,822 - epoch:4, training loss:1217.7265 validation loss:25.9255
+2025-03-18 21:16:21,660 - epoch:5, training loss:1245.2142 validation loss:27.0168
+2025-03-18 21:16:32,570 - epoch:6, training loss:1214.1428 validation loss:17.6793
+2025-03-18 21:16:43,112 - epoch:7, training loss:1209.3806 validation loss:19.3467
+2025-03-18 21:16:53,952 - epoch:8, training loss:1200.8879 validation loss:19.7007
+2025-03-18 21:17:04,656 - epoch:9, training loss:1173.7521 validation loss:20.9567
+2025-03-18 21:17:15,489 - epoch:10, training loss:1233.8502 validation loss:26.9372
+2025-03-18 21:17:26,454 - epoch:11, training loss:1175.1357 validation loss:21.7907
+2025-03-18 21:17:37,321 - epoch:12, training loss:1152.6562 validation loss:21.2913
+2025-03-18 21:17:39,316 - [*] loss:2452.0532
+2025-03-18 21:17:39,357 - [*] year 2016, testing
+2025-03-18 21:17:39,805 - T:3	MAE	25.8323	RMSE	40.9735	MAPE	26.2298
+2025-03-18 21:17:40,649 - T:6	MAE	28.0841	RMSE	45.2919	MAPE	29.2814
+2025-03-18 21:17:43,241 - T:12	MAE	30.8121	RMSE	49.9504	MAPE	33.3049
+2025-03-18 21:17:43,241 - T:Avg	MAE	27.9918	RMSE	44.8870	MAPE	29.2662
+2025-03-18 21:17:43,243 - Finished optimization, total time:121.82 s, best model:log/AIR/eac-43/2016/17.6793.pkl
+2025-03-18 21:17:43,275 - [*] Year 2017 load from ../../../data/weichen/TrafficStream_data/AIR/FastData/2017.npz
+2025-03-18 21:17:44,385 - [*] Year 2017 Dataset load!
+2025-03-18 21:17:44,385 - [*] load from log/AIR/eac-43/2016/17.6793.pkl
+2025-03-18 21:17:44,480 - Total Parameters: 10304
+2025-03-18 21:17:44,480 - Trainable Parameters: 6996
+2025-03-18 21:17:44,480 - [*] Year 2017 Training start
+2025-03-18 21:17:45,430 - node number torch.Size([147712, 12])
+2025-03-18 21:17:48,666 - epoch:0, training loss:1236.6592 validation loss:26.9795
+2025-03-18 21:17:52,901 - epoch:1, training loss:1224.9294 validation loss:26.8524
+2025-03-18 21:17:57,243 - epoch:2, training loss:1192.1740 validation loss:26.5103
+2025-03-18 21:18:01,637 - epoch:3, training loss:1208.9771 validation loss:26.1049
+2025-03-18 21:18:05,757 - epoch:4, training loss:1194.7141 validation loss:25.5548
+2025-03-18 21:18:10,006 - epoch:5, training loss:1197.6161 validation loss:26.7293
+2025-03-18 21:18:14,327 - epoch:6, training loss:1199.4811 validation loss:26.5001
+2025-03-18 21:18:19,016 - epoch:7, training loss:1184.7291 validation loss:26.3603
+2025-03-18 21:18:23,383 - epoch:8, training loss:1189.3395 validation loss:27.0058
+2025-03-18 21:18:27,771 - epoch:9, training loss:1189.9643 validation loss:26.3978
+2025-03-18 21:18:32,322 - epoch:10, training loss:1187.0061 validation loss:25.9372
+2025-03-18 21:18:34,542 - [*] loss:1459.7632
+2025-03-18 21:18:34,593 - [*] year 2017, testing
+2025-03-18 21:18:35,048 - T:3	MAE	18.5920	RMSE	27.2953	MAPE	22.5183
+2025-03-18 21:18:36,073 - T:6	MAE	21.8791	RMSE	32.9963	MAPE	26.1761
+2025-03-18 21:18:39,105 - T:12	MAE	25.3713	RMSE	38.4884	MAPE	30.5745
+2025-03-18 21:18:39,105 - T:Avg	MAE	21.6087	RMSE	32.2714	MAPE	26.0616
+2025-03-18 21:18:39,107 - Finished optimization, total time:30.40 s, best model:log/AIR/eac-43/2017/25.5548.pkl
+2025-03-18 21:18:39,156 - [*] Year 2018 load from ../../../data/weichen/TrafficStream_data/AIR/FastData/2018.npz
+2025-03-18 21:18:40,330 - [*] Year 2018 Dataset load!
+2025-03-18 21:18:40,330 - [*] load from log/AIR/eac-43/2017/25.5548.pkl
+2025-03-18 21:18:40,366 - Total Parameters: 10538
+2025-03-18 21:18:40,366 - Trainable Parameters: 7230
+2025-03-18 21:18:40,366 - [*] Year 2018 Training start
+2025-03-18 21:18:41,407 - node number torch.Size([152704, 12])
+2025-03-18 21:18:44,859 - epoch:0, training loss:1121.3901 validation loss:27.2407
+2025-03-18 21:18:49,581 - epoch:1, training loss:1092.4781 validation loss:26.1559
+2025-03-18 21:18:54,393 - epoch:2, training loss:1111.4902 validation loss:27.0029
+2025-03-18 21:18:59,275 - epoch:3, training loss:1106.1124 validation loss:27.4821
+2025-03-18 21:19:04,140 - epoch:4, training loss:1089.4667 validation loss:26.7597
+2025-03-18 21:19:08,972 - epoch:5, training loss:1097.8082 validation loss:26.7302
+2025-03-18 21:19:13,576 - epoch:6, training loss:1085.2782 validation loss:26.3397
+2025-03-18 21:19:18,477 - epoch:7, training loss:1104.5844 validation loss:26.1515
+2025-03-18 21:19:23,158 - epoch:8, training loss:1092.3654 validation loss:26.8346
+2025-03-18 21:19:27,945 - epoch:9, training loss:1088.9546 validation loss:26.8419
+2025-03-18 21:19:32,527 - epoch:10, training loss:1108.4559 validation loss:27.3995
+2025-03-18 21:19:37,291 - epoch:11, training loss:1093.3028 validation loss:26.8568
+2025-03-18 21:19:41,960 - epoch:12, training loss:1093.8538 validation loss:26.7456
+2025-03-18 21:19:46,745 - epoch:13, training loss:1085.2561 validation loss:27.2735
+2025-03-18 21:19:48,948 - [*] loss:1096.6505
+2025-03-18 21:19:48,988 - [*] year 2018, testing
+2025-03-18 21:19:49,448 - T:3	MAE	12.9520	RMSE	22.4637	MAPE	21.1685
+2025-03-18 21:19:50,319 - T:6	MAE	16.1788	RMSE	27.8429	MAPE	26.4578
+2025-03-18 21:19:53,098 - T:12	MAE	19.5849	RMSE	33.1721	MAPE	32.5077
+2025-03-18 21:19:53,098 - T:Avg	MAE	15.8599	RMSE	27.1579	MAPE	26.0709
+2025-03-18 21:19:53,100 - Finished optimization, total time:42.47 s, best model:log/AIR/eac-43/2018/26.1515.pkl
+2025-03-18 21:19:53,153 - [*] Year 2019 load from ../../../data/weichen/TrafficStream_data/AIR/FastData/2019.npz
+2025-03-18 21:19:54,341 - [*] Year 2019 Dataset load!
+2025-03-18 21:19:54,341 - [*] load from log/AIR/eac-43/2018/26.1515.pkl
+2025-03-18 21:19:54,436 - Total Parameters: 10592
+2025-03-18 21:19:54,436 - Trainable Parameters: 7284
+2025-03-18 21:19:54,437 - [*] Year 2019 Training start
+2025-03-18 21:19:55,844 - node number torch.Size([153856, 12])
+2025-03-18 21:19:59,331 - epoch:0, training loss:868.9393 validation loss:21.6125
+2025-03-18 21:20:04,036 - epoch:1, training loss:857.6568 validation loss:21.3371
+2025-03-18 21:20:08,790 - epoch:2, training loss:857.3685 validation loss:21.5689
+2025-03-18 21:20:13,539 - epoch:3, training loss:857.4542 validation loss:22.0741
+2025-03-18 21:20:18,176 - epoch:4, training loss:857.8954 validation loss:21.8872
+2025-03-18 21:20:22,899 - epoch:5, training loss:856.7800 validation loss:21.6160
+2025-03-18 21:20:27,502 - epoch:6, training loss:856.3708 validation loss:21.3859
+2025-03-18 21:20:32,039 - epoch:7, training loss:855.0915 validation loss:21.9344
+2025-03-18 21:20:34,349 - [*] loss:1028.4026
+2025-03-18 21:20:34,397 - [*] year 2019, testing
+2025-03-18 21:20:34,855 - T:3	MAE	14.7989	RMSE	22.3495	MAPE	21.7372
+2025-03-18 21:20:35,708 - T:6	MAE	17.6974	RMSE	27.3882	MAPE	25.8194
+2025-03-18 21:20:38,428 - T:12	MAE	20.8981	RMSE	32.3132	MAPE	30.9893
+2025-03-18 21:20:38,428 - T:Avg	MAE	17.4816	RMSE	26.7433	MAPE	25.7436
+2025-03-18 21:20:38,430 - Finished optimization, total time:24.00 s, best model:log/AIR/eac-43/2019/21.3371.pkl
+2025-03-18 21:20:38,442 - 
 
 
-2024-09-14 23:19:32,153 - 3   	 MAE	     25.83	     18.59	     12.95	     14.80		   18.04
-2024-09-14 23:19:32,153 - 3   	RMSE	     40.97	     27.30	     22.46	     22.35		   28.27
-2024-09-14 23:19:32,153 - 3   	MAPE	     26.23	     22.52	     21.17	     21.74		   22.91
-2024-09-14 23:19:32,153 - 6   	 MAE	     28.08	     21.88	     16.18	     17.70		   20.96
-2024-09-14 23:19:32,153 - 6   	RMSE	     45.29	     33.00	     27.84	     27.39		   33.38
-2024-09-14 23:19:32,153 - 6   	MAPE	     29.28	     26.18	     26.46	     25.82		   26.93
-2024-09-14 23:19:32,153 - 12  	 MAE	     30.81	     25.37	     19.58	     20.90		   24.17
-2024-09-14 23:19:32,153 - 12  	RMSE	     49.95	     38.49	     33.17	     32.31		   38.48
-2024-09-14 23:19:32,153 - 12  	MAPE	     33.30	     30.57	     32.51	     30.99		   31.84
-2024-09-14 23:19:32,154 - Avg 	 MAE	     27.99	     21.61	     15.86	     17.48		   20.74
-2024-09-14 23:19:32,154 - Avg 	RMSE	     44.89	     32.27	     27.16	     26.74		   32.76
-2024-09-14 23:19:32,154 - Avg 	MAPE	     29.27	     26.06	     26.07	     25.74		   26.79
-2024-09-14 23:19:32,154 - year	2016	total_time	   38.7769	average_time	    2.9829	epoch	13
-2024-09-14 23:19:32,154 - year	2017	total_time	   16.6424	average_time	    1.5130	epoch	11
-2024-09-14 23:19:32,154 - year	2018	total_time	   21.4880	average_time	    1.5349	epoch	14
-2024-09-14 23:19:32,154 - year	2019	total_time	   12.3288	average_time	    1.5411	epoch	8
-2024-09-14 23:19:32,154 - total time: 89.2360
+2025-03-18 21:20:38,442 - 3   	 MAE	     25.83	     18.59	     12.95	     14.80		   18.04
+2025-03-18 21:20:38,443 - 3   	RMSE	     40.97	     27.30	     22.46	     22.35		   28.27
+2025-03-18 21:20:38,443 - 3   	MAPE	     26.23	     22.52	     21.17	     21.74		   22.91
+2025-03-18 21:20:38,443 - 6   	 MAE	     28.08	     21.88	     16.18	     17.70		   20.96
+2025-03-18 21:20:38,443 - 6   	RMSE	     45.29	     33.00	     27.84	     27.39		   33.38
+2025-03-18 21:20:38,443 - 6   	MAPE	     29.28	     26.18	     26.46	     25.82		   26.93
+2025-03-18 21:20:38,443 - 12  	 MAE	     30.81	     25.37	     19.58	     20.90		   24.17
+2025-03-18 21:20:38,443 - 12  	RMSE	     49.95	     38.49	     33.17	     32.31		   38.48
+2025-03-18 21:20:38,443 - 12  	MAPE	     33.30	     30.57	     32.51	     30.99		   31.84
+2025-03-18 21:20:38,443 - Avg 	 MAE	     27.99	     21.61	     15.86	     17.48		   20.74
+2025-03-18 21:20:38,443 - Avg 	RMSE	     44.89	     32.27	     27.16	     26.74		   32.76
+2025-03-18 21:20:38,443 - Avg 	MAPE	     29.27	     26.06	     26.07	     25.74		   26.79
+2025-03-18 21:20:38,443 - year	2016	total_time	  121.8152	average_time	    9.3704	epoch	13
+2025-03-18 21:20:38,443 - year	2017	total_time	   30.4023	average_time	    2.7639	epoch	11
+2025-03-18 21:20:38,443 - year	2018	total_time	   42.4719	average_time	    3.0337	epoch	14
+2025-03-18 21:20:38,443 - year	2019	total_time	   23.9955	average_time	    2.9995	epoch	8
+2025-03-18 21:20:38,443 - total time: 218.6848
