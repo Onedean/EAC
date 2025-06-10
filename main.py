@@ -15,8 +15,8 @@ from model import detect_default
 from src.model import replay
 
 from utils.initialize import init, seed_anything, init_log
-from utils.common_tools import mkdirs, load_best_model, long_term_pattern
-from trainer.default_trainer import train, test_model
+from utils.common_tools import mkdirs, load_best_model, long_term_pattern, load_test_best_model
+from trainer.default_trainer import train, test_model  # , test_model_with_ttc
 
 
 def main(args):
@@ -54,9 +54,10 @@ def main(args):
         vars(args)["adj"] = torch.from_numpy(adj).to(torch.float).to(args.device)  # Convert the adjacency matrix to a PyTorch tensor and store it in args
         
         if year == args.begin_year and args.load_first_year:  # If it is the first year and you need to skip the first year, the model has been trained and does not need to be retrained
-            model, _ = load_best_model(args)
+            model, _ = load_test_best_model(args)
             test_loader = DataLoader(SpatioTemporalDataset(inputs, "test"), batch_size=args.batch_size, shuffle=False, pin_memory=True, num_workers=32)
             test_model(model, args, test_loader, pin_memory=True)
+            # test_model_with_ttc(model, args, test_loader, pin_memory=True)
             continue
         
         vars(args)["node_list"] = list()
@@ -65,7 +66,7 @@ def main(args):
             
             vars(args)["init_graph_size"] = np.load(osp.join(args.graph_path, str(year-1)+"_adj.npz"))["x"].shape[0]
             
-            model, _ = load_best_model(args)
+            model, _ = load_test_best_model(args)
             
             node_list = list()
             
@@ -145,9 +146,11 @@ def main(args):
             train(inputs, args)
         else:
             if args.auto_test:
-                model, _ = load_best_model(args)
+                # model, _ = load_best_model(args)
+                model, _ = load_test_best_model(args)
                 test_loader = DataLoader(SpatioTemporalDataset(inputs, "test"), batch_size=args.batch_size, shuffle=False, pin_memory=True, num_workers=32)
                 test_model(model, args, test_loader, pin_memory=True)
+                # test_model_with_ttc(model, args, test_loader, pin_memory=True)
     
     
     # Print different step metrics for each year
@@ -177,13 +180,13 @@ def main(args):
 if __name__ == "__main__":
     parser = argparse.ArgumentParser(formatter_class = argparse.RawTextHelpFormatter)
     parser.add_argument("--conf", type = str, default = "conf/test.json")
-    parser.add_argument("--seed", type = int, default = 42)
+    parser.add_argument("--seed", type = int, default = 43)
     parser.add_argument("--paral", type = int, default = 0)
     parser.add_argument("--gpuid", type = int, default = 2)
     parser.add_argument("--logname", type = str, default = "info")
     parser.add_argument("--method", type = str, default = "TrafficStream")
-    parser.add_argument("--load_first_year", type = int, default = 0, help="0: training first year, 1: load from model path of first year")
-    parser.add_argument("--first_year_model_path", type = str, default = "log/PEMS/trafficstream-42/2011/16.6936.pkl", help='specify a pretrained model root')
+    parser.add_argument("--load_first_year", type = int, default = 1, help="0: training first year, 1: load from model path of first year")
+    parser.add_argument("--first_year_model_path", type = str, default = "log/PEMS/eac-43/2011/14.7956.pkl", help='specify a pretrained model root')
     args = parser.parse_args()
     vars(args)["device"] = torch.device("cuda:{}".format(args.gpuid)) if torch.cuda.is_available() and args.gpuid != -1 else "cpu"
     vars(args)["methods"] = {'TrafficStream': TrafficStream_Model, 'STKEC': STKEC_Model, 'EAC': EAC_Model, 'Universal': Universal_Model} # , 'LSTM': LSTM_Model, 'MLP': MLP_Model, 'STLora': STLora_Model, 

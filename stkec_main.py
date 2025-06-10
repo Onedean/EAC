@@ -15,8 +15,8 @@ from model import detect_default
 from src.model import replay
 
 from utils.initialize import init, seed_anything, init_log
-from utils.common_tools import mkdirs, load_best_model, long_term_pattern
-from src.trainer.stkec_trainer import train, test_model
+from utils.common_tools import mkdirs, load_best_model, long_term_pattern, load_test_best_model
+from src.trainer.stkec_trainer import train, test_model  # , test_model_with_ttc
 
 
 def main(args):
@@ -50,9 +50,11 @@ def main(args):
         
         # If it is the first year and you need to skip the first year, the model has been trained and does not need to be retrained
         if year == args.begin_year and args.load_first_year:
-            model, _ = load_best_model(args)
+            # model, _ = load_best_model(args)
+            model, _ = load_test_best_model(args)
             test_loader = DataLoader(SpatioTemporalDataset(inputs, "test"), batch_size=args.batch_size, shuffle=False, pin_memory=True, num_workers=32)
             test_model(model, args, test_loader, pin_memory=True)
+            # test_model_with_ttc(model, args, test_loader, pin_memory=True)
             continue
         
         # If it is an incremental strategy and the year is greater than the start year
@@ -140,9 +142,11 @@ def main(args):
             train(inputs, args)
         else:
             if args.auto_test:  # If you need automatic testing
-                model, _ = load_best_model(args)
+                # model, _ = load_best_model(args)
+                model, _ = load_test_best_model(args)
                 test_loader = DataLoader(SpatioTemporalDataset(inputs, "test"), batch_size=args.batch_size, shuffle=False, pin_memory=True, num_workers=32)
                 test_model(model, args, test_loader, pin_memory=True)
+                # test_model_with_ttc(model, args, test_loader, pin_memory=True)
     
     
     # Print different step metrics for each year

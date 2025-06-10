@@ -3,7 +3,7 @@
     "end_year": 2019,
     "dropout": 0.0,
     "lr": 0.03,
-    "batch_size": 128,
+    "batch_size": 64,
     "epoch": 100,
     "gpuid": 1,
     "loss": "mse",
@@ -33,8 +33,8 @@
     "logname": "eac",
     "rank": 6,
     "init": true,
-    "train": 1,
-    "auto_test": 0,
+    "train": 0,
+    "auto_test": 1,
 
     "strategy": "retrain",
 

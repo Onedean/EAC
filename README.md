@@ -1,5 +1,5 @@
 <div align="center">
-  <h2><b><big>(ICLR'25) — ⏫EAC⏬</big> <br><br> <u>E</u>xpand <u>a</u>nd <u>C</u>ompress: Exploring Tuning Principles <br> for Continual Spatio-Temporal Graph Forecasting </b></h2>
+  <h2><b><big>(ICLR'25) — 🏞️ EAC</big> <br><br> <u>E</u>xpand <u>a</u>nd <u>C</u>ompress: Exploring Tuning Principles <br> for Continual Spatio-Temporal Graph Forecasting </b></h2>
 </div>
 
 <div align="center">
@@ -24,14 +24,16 @@
 
 </div>
 
-## Todo List:
+<!-- ## Todo List:
 
-- [ ] We plan to release a spatio-temporal foundation model (much more advanced than what we have now) in the coming months, so stay tuned! 🤫
+- [ ] We plan to release a spatio-temporal foundation model (much more advanced than what we have now) in the coming months, so stay tuned! 🤫 -->
 
 
 ## Updates/News:
 
-🚩 **News** (Apr. 2025): We upload all processed complete datasets to the [cloud disk](https://hkustgz-my.sharepoint.com/:f:/g/personal/wchen110_connect_hkust-gz_edu_cn/EuiKtt95qnpNgOngXAV_MmABWYyEBh74ooM94kdycwg4Sw?e=ZRCC1n), and you can download them directly to avoid the difficulty of reproducing the processing problems! 😎
+🚩 **News** (Jun. 2025): We have fixed the problem of not being able to use direct inference with weights. 💉
+
+🚩 **News** (Apr. 2025): We upload all processed complete datasets to the [cloud disk](https://hkustgz-my.sharepoint.com/:f:/g/personal/wchen110_connect_hkust-gz_edu_cn/EuiKtt95qnpNgOngXAV_MmABWYyEBh74ooM94kdycwg4Sw?e=ZRCC1n), and you can download them directly to avoid the difficulty of reproducing the processing problems! 😊
 
 🚩 **News** (Feb. 2025): EAC's code, data, weights, and training logs are fully open source! Try to improve on this! 😊
 

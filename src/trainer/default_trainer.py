@@ -1,9 +1,10 @@
 import torch
-
+import torch.nn as nn
 import numpy as np
 import os.path as osp
 import networkx as nx
 import torch.nn.functional as func
+from tqdm import tqdm
 from torch import optim
 from datetime import datetime
 from torch_geometric.utils import to_dense_batch
@@ -13,6 +14,41 @@ from torch_geometric.loader import DataLoader
 from dataer.SpatioTemporalDataset import SpatioTemporalDataset
 from utils.metric import cal_metric, masked_mae_np
 from utils.common_tools import mkdirs, load_best_model
+
+'''
+class SDC_Module(nn.Module):
+    """SDC Module"""
+    def __init__(self, num_nodes, freq_bins, groups=4):
+        super().__init__()
+        self.groups = groups
+        self.group_size = freq_bins // groups
+        self.lambda_amp = nn.Parameter(torch.zeros(groups, num_nodes, 1))
+        self.lambda_phi = nn.Parameter(torch.zeros(groups, num_nodes, 1))
+
+    def forward(self, y_pred):
+        # y_pred: [B,1,N,T]
+        B, C, N, T = y_pred.shape
+        y = y_pred[:,0]  # [B,N,T]
+        # FFT -> [B,N,M]
+        Yf = torch.fft.rfft(y, dim=-1)
+        A = torch.abs(Yf)
+        P = torch.angle(Yf)
+        
+        Yf_corr = torch.zeros_like(Yf)
+        for g in range(self.groups):
+            start = g * self.group_size
+            end = T//2+1 if g==self.groups-1 else (g+1)*self.group_size
+            lam_a = self.lambda_amp[g].unsqueeze(0)  # -> [1,N,1]
+            lam_p = self.lambda_phi[g].unsqueeze(0)
+            
+            A_g = A[:,:,start:end] * (1 + lam_a)
+            P_g = P[:,:,start:end] + lam_p
+            
+            Yf_corr[:,:,start:end] = A_g * torch.exp(1j * P_g)
+        
+        y_time = torch.fft.irfft(Yf_corr, n=T, dim=-1)
+        return y_time.unsqueeze(1)  # [B,1,N,T]
+'''
 
 
 def train(inputs, args):
@@ -194,6 +230,7 @@ def train(inputs, args):
 
 
 def test_model(model, args, testset, pin_memory):
+    
     model.eval()
     pred_ = []
     truth_ = []
@@ -203,9 +240,11 @@ def test_model(model, args, testset, pin_memory):
         for data in testset:
             data = data.to(args.device, non_blocking=pin_memory)
             pred = model(data, args.adj)
+            
             loss += func.mse_loss(data.y, pred, reduction="mean")
             pred, _ = to_dense_batch(pred, batch=data.batch)
             data.y, _ = to_dense_batch(data.y, batch=data.batch)
+                        
             pred_.append(pred.cpu().data.numpy())
             truth_.append(data.y.cpu().data.numpy())
             cn += 1
@@ -214,3 +253,85 @@ def test_model(model, args, testset, pin_memory):
         pred_ = np.concatenate(pred_, 0)
         truth_ = np.concatenate(truth_, 0)
         cal_metric(truth_, pred_, args)
+
+
+
+def masked_mae(prediction: torch.Tensor, target: torch.Tensor, null_val: float = np.nan) -> torch.Tensor:
+    if np.isnan(null_val):
+        mask = ~torch.isnan(target)
+    else:
+        eps = 5e-5
+        mask = ~torch.isclose(target, torch.tensor(null_val).expand_as(target).to(target.device), atol=eps, rtol=0.0)
+
+    mask = mask.float()
+    mask /= torch.mean(mask)  # Normalize mask to avoid bias in the loss due to the number of valid entries
+    mask = torch.nan_to_num(mask)  # Replace any NaNs in the mask with zero
+
+    loss = torch.abs(prediction - target)
+    loss = loss * mask  # Apply the mask to the loss
+    loss = torch.nan_to_num(loss)  # Replace any NaNs in the loss with zero
+
+    return torch.mean(loss)
+
+
+'''
+def test_model_with_ttc(model, args, testset, pin_memory):
+    
+    model.eval()
+    
+    T = 12
+    M = T // 2 + 1
+    groups = 4
+    FRP = SDC_Module(args.graph_size, M, groups).to(args.device)
+    optim = torch.optim.Adam(FRP.parameters(), lr=1e-4)
+    crit = masked_mae
+    import queue
+    q = queue.Queue(maxsize=T)
+    
+    pred_ = []
+    truth_ = []
+    
+    for data in tqdm(testset):
+        data = data.to(args.device, non_blocking=pin_memory)
+        
+        with torch.no_grad():
+            pred = model(data, args.adj)
+        pred, _ = to_dense_batch(pred, batch=data.batch)
+        data.y, _ = to_dense_batch(data.y, batch=data.batch)
+        
+        pred = pred.unsqueeze(1)
+        
+        FRP.eval()
+        pred = FRP(pred)
+        
+        pred = pred.squeeze(1)
+        
+        pred_.append(pred.cpu().data.numpy())
+        truth_.append(data.y.cpu().data.numpy())
+        
+        q.put((data, data.y))
+        if q.full():
+            x_o, y_o = q.get()
+            with torch.no_grad():
+                yb_o = model(x_o, args.adj)
+            
+            yb_o, _ = to_dense_batch(yb_o, batch=data.batch)
+            
+            yb_o = yb_o.unsqueeze(1)
+            
+            FRP.train()
+            yc_o = FRP(yb_o)
+            
+            yc_o = yc_o.squeeze(1)
+            
+            loss = func.mse_loss(yc_o, y_o)
+            loss.backward()
+            optim.step()
+            optim.zero_grad()
+            FRP.eval()
+        
+    
+    pred_ = np.concatenate(pred_, 0)
+    truth_ = np.concatenate(truth_, 0)
+    cal_metric(truth_, pred_, args)
+'''

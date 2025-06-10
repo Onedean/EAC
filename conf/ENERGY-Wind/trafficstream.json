@@ -3,7 +3,7 @@
     "end_year": 3,
     "dropout": 0.0,
     "lr": 0.01,
-    "batch_size": 128,
+    "batch_size": 64,
     "epoch": 100,
     "gpuid": 1,
     "loss": "mse",
