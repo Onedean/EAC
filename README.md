@@ -31,6 +31,8 @@
 
 ## Updates/News:
 
+🚩 **News** (Jun. 2025): Our follow up work, which systematically summarizes OOD methods for spatio-temporal forecasting and proposes a novel test-time computational paradigm, [ST-TTC](https://arxiv.org/pdf/2506.00635v2), has been accepted by **NeurIPS 2025 (Spotlight)**. 🚀
+
 🚩 **News** (Jun. 2025): We have fixed the problem of not being able to use direct inference with weights. 💉
 
 🚩 **News** (Apr. 2025): We upload all processed complete datasets to the [cloud disk](https://hkustgz-my.sharepoint.com/:f:/g/personal/wchen110_connect_hkust-gz_edu_cn/EuiKtt95qnpNgOngXAV_MmABWYyEBh74ooM94kdycwg4Sw?e=ZRCC1n), and you can download them directly to avoid the difficulty of reproducing the processing problems! 😊
@@ -120,6 +122,17 @@ sh scripts/pems_run.sh
   title={Expand and Compress: Exploring Tuning Principles for Continual Spatio-Temporal Graph Forecasting},
   author={Wei Chen and Yuxuan Liang},
   booktitle={The Thirteenth International Conference on Learning Representations},
+  year={2025}
+}
+```
+
+We also welcome to cite our recent follow up work:
+
+```
+@inproceedings{chen2025stttc,
+  title={Learning with Calibration: Exploring Test-Time Computing of Spatio-Temporal Forecasting},
+  author={Wei Chen and Yuxuan Liang},
+  booktitle={The Thirty-ninth Annual Conference on Neural Information Processing Systems},
   year={2025}
 }
 ```
